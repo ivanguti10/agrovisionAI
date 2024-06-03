@@ -1,0 +1,4 @@
+#Increase fonts to improve readability
+font.size            : 16
+axes.labelsize       : 20
+axes.titlesize       : 20

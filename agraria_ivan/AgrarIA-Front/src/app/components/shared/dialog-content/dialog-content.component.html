@@ -1,0 +1,21 @@
+<mat-card class="custom-card">
+    <!-- Botón de cierre y otros botones de acción -->
+    <mat-card-actions class="card-actions">
+        <button mat-icon-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-card-actions>
+
+    <!-- Contenido principal, en este caso un iframe -->
+    <mat-card-content >
+        <iframe *ngIf="data.html" [src]="iframeUrl" width="100%" height="500" ></iframe>
+    </mat-card-content>
+
+    <!-- Footer con texto o leyenda -->
+    <mat-card-footer class="card-footer">
+        <span class="leyenda-texto">
+            {{ text }}
+        </span>
+    </mat-card-footer>
+</mat-card>
+

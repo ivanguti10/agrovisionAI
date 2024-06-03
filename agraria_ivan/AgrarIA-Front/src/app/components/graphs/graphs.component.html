@@ -1,0 +1,69 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <h1>Gráficos a partir de archivos CSV</h1>
+        </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="mb-3">
+            <input class="form-control" type="file" name="archivo" id="archivo" multiple (change)="getData($event)">
+        </div>
+
+        <div class="mb-3">
+            <div>
+                <button mat-raised-button color="primary" class="me-4" (click)="visualizarAtributos()">Visualizar
+                    atributos
+                    (20s)</button>
+                <button mat-raised-button color="primary" class="me-4" (click)="analisisDeInformacion()">Análisis de
+                    Información
+                    (2m)</button>
+                <mat-form-field class="me-2">
+                    <mat-select [disabled]="disableSelect.value" placeholder="--Algoritmo--" id="select"
+                        (valueChange)="changeSelect($event)">
+                        <mat-option value="Gradient Boosting">Gradient Boosting</mat-option>
+                        <mat-option value="XGB">XGB</mat-option>
+                        <mat-option value="Lasso">Lasso</mat-option>
+                        <mat-option value="Ridge">Ridge</mat-option>
+                        <mat-option value="SGDRegressor">SGDRegressor</mat-option>
+                        <mat-option value="MLP">MLP (2m)</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="machineLearning()">Machine Learning</button>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-card-content *ngIf="!loading">
+        <h4 class="mt-5">Gráficos generados:</h4>
+        <div class="row row-cols-3 row-cols-md-4 g-4">
+            <div *ngFor="let grafico of graficos; let i = index" class="col">
+                <mat-card>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Gráfico {{ i + 1 }}
+                            </mat-panel-title>
+                            <mat-panel-description>
+
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <a [href]="'data:image/png;base64,' + grafico" download="grafico{{ i }}.png"
+                            class="btn btn-light float-end">
+                            <mat-icon aria-hidden="false" aria-label="" fontIcon="file_download"></mat-icon>
+                        </a>
+                        <img [src]="'data:image/png;base64,' + grafico"
+                            (click)="openImageDialog('data:image/png;base64,' + grafico)" draggable="false"
+                            class="card-img-bottom imagen-hover" [alt]="'Gráfico ' + (i + 1)">
+                    </mat-expansion-panel>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="loading" class="">
+    <div class="center-container"> <!-- Crear un contenedor de centrado -->
+        <mat-spinner diameter="48" color="accent"></mat-spinner>
+    </div>
+</mat-card>

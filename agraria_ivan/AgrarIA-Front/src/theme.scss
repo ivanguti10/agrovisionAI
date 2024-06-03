@@ -1,0 +1,54 @@
+@import '@angular/material/theming';
+
+// Crea tu paleta de colores personalizada
+$mi-color-custom: (
+  50: #e6f2d6,
+  100: #c1dfad,
+  200: #99cd83,
+  300: #70ba58,
+  400: #54aa36,
+  500: #99cd55, // Tu color principal
+  600: #3e9917,
+  700: #368f14,
+  800: #2e8510,
+  900: #1f740b,
+  A100: #ffffff,
+  A200: #f0ffe0,
+  A400: #bdffac,
+  A700: #a4ff93,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000, // Contraste para tu color principal
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  )
+);
+
+// Define las paletas para primary, accent y warn usando tu color personalizado
+$mi-color-primario: mat-palette($mi-color-custom, 500);
+$mi-color-accent: mat-palette($mi-color-custom, A200, A100, A400);
+$mi-color-warn: mat-palette($mi-color-custom, 900);
+
+// Crea el tema
+$mi-tema: mat-light-theme(
+  (
+    color: (
+      primary: $mi-color-primario,
+      accent: $mi-color-accent,
+      warn: $mi-color-warn,
+    ),
+  )
+);
+
+// Incluye todos los componentes de Angular Material en este tema
+@include angular-material-theme($mi-tema);

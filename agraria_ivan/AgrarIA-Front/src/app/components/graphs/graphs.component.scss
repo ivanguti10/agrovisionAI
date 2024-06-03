@@ -1,0 +1,25 @@
+/* Establece el estilo de la imagen */
+.imagen-hover {
+    cursor: pointer;
+    max-width: 100%;
+    /* Ajusta el ancho máximo de la imagen según tus necesidades */
+    height: auto;
+    /* Para mantener la proporción de aspecto */
+    transition: transform 0.75s;
+    /* Agrega una transición suave para el efecto hover */
+
+}
+
+/* Establece el estilo del SVG y ocúltalo inicialmente */
+.imagen-hover:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    transform: scale(1.05);
+}
+.center-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Ajusta el alto del contenedor para centrar verticalmente */
+  }
+  
