@@ -117,7 +117,16 @@ class ReceiverAgent(Agent):
         b = self.RecvBehav()
         self.add_behaviour(b)
 
+def obtener_ruta_escritorio():
+    onedrive_path = os.environ.get('ONEDRIVE')
+    if not onedrive_path:
+        raise EnvironmentError("No se encontró la variable de entorno 'ONEDRIVE'")
+    desktop_path = Path(onedrive_path) / 'Escritorio' / 'proyecto'
+    return desktop_path
 
+# Ejemplo de uso:
+ruta_del_escritorio = obtener_ruta_escritorio()
+print(f"La ruta del escritorio es: {ruta_del_escritorio}")
 
 def get_images_base64(class_id, images_number, verbose=0):
     plot_list = train[train["label"] == class_id].sample(images_number)['image_id'].tolist()
@@ -130,11 +139,13 @@ def get_images_base64(class_id, images_number, verbose=0):
         if not image_id.endswith(".jpg"):
             image_id += ".jpg"
 
-        path = str(BASE_DIR / 'train_images' / image_id)
-        image = cv2.imread(path)
+
+        ruta_del_escritorio = Path(obtener_ruta_escritorio())
+        image_path = str(ruta_del_escritorio / 'train_images' / image_id)
+        image = cv2.imread(image_path)
 
         if image is None:
-            print(f"Error: No se pudo cargar la imagen en la ruta {path}")
+            print(f"Error: No se pudo cargar la imagen en la ruta {image_path}")
             continue
         
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -169,7 +180,8 @@ async def mostrar_imagenes(class_id, label, images_number, verbose=0):
         if not image_id.endswith(".jpg"):
             image_id += ".jpg"
 
-        image_path = str(BASE_DIR / 'train_images' / image_id)
+        ruta_del_escritorio = Path(obtener_ruta_escritorio())
+        image_path = str(ruta_del_escritorio / 'train_images' / image_id)
         image = cv2.imread(image_path)
         
         if image is None:
