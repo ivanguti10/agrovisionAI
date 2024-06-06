@@ -94,9 +94,5 @@ def yuca_route_CDM():
 def yuca_route_CBSD():
     return yca.yuca_CBSD()
 
-@app.route('/yucamodeloIA', methods=["GET", "POST"])
-def yuca_route_modelo():
-    return yca.yucamodeloIA()
-
 if __name__ == "__main__":
     app.run(debug=True)

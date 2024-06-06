@@ -44,6 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { XaiComponent } from './components/modelos/xai/xai.component';
 import { RnnComponent } from './components/modelos/rnn/rnn.component';
 import { YucaComponent } from './components/modelos/yuca/yuca.component';
+import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
+
+
 
 
 @NgModule({
@@ -58,8 +61,8 @@ import { YucaComponent } from './components/modelos/yuca/yuca.component';
     DialogImageComponent,
     YucaComponent,
     DialogImageComponent,
-    
-  ],
+    YucaEjemplosComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

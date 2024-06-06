@@ -289,15 +289,3 @@ def yuca_CBSD():
 
     return None
 
-def yucamodeloIA():
-    if request.method == "POST":
-        try:
-            archivo1 = request.files["archivo"]
-            features = pd.read_hdf(archivo1, 'healthy')
-            summary = features.describe().to_dict()
-            print(summary)
-            return jsonify({"message": "Modelo cargado correctamente"}), 200
-        except Exception as e:
-            return jsonify({"message": f"Error al cargar el modelo: {str(e)}"}), 500
-
-    return jsonify({"message": "Método no permitido"}), 405

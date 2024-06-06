@@ -5,6 +5,8 @@ import { GraphsComponent } from './components/graphs/graphs.component';
 import { XaiComponent } from './components/modelos/xai/xai.component';
 import { RnnComponent } from './components/modelos/rnn/rnn.component';
 import { YucaComponent } from './components/modelos/yuca/yuca.component';
+import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
+
 
 
 
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'xai', component: XaiComponent },
   { path: 'rnn', component: RnnComponent },
   { path: 'yuca', component: YucaComponent },
+  { path: 'yuca_ejemplos', component: YucaEjemplosComponent },
+  { path: '', redirectTo: '/yuca_ejemplos', pathMatch: 'full' }, // Redirigir a ComponentA por defecto
   { path: '**', redirectTo: 'home' },
 ];
 @NgModule({
