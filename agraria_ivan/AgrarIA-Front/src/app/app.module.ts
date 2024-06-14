@@ -47,6 +47,7 @@ import { YucaComponent } from './components/modelos/yuca/yuca.component';
 import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
 import { YucaModeloComponent } from './components/modelos/yuca-modelo/yuca-modelo.component';
 import { YucaDuplicadosComponent } from './components/modelos/yuca-duplicados/yuca-duplicados.component';
+import { YucaClasificarComponent } from './components/modelos/yuca-clasificar/yuca-clasificar.component';
 
 
 
@@ -66,6 +67,7 @@ import { YucaDuplicadosComponent } from './components/modelos/yuca-duplicados/yu
     YucaEjemplosComponent,
     YucaModeloComponent,
     YucaDuplicadosComponent,
+    YucaClasificarComponent,
     ],
   imports: [
     BrowserModule,

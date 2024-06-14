@@ -556,3 +556,24 @@ def mostrarDuplicados():
         return images_base64
 
     return None
+
+def cargarPlanta():
+    if request.method == "POST":
+        BASE_DIR = Path(__file__).resolve().parent
+        prueba_file = request.files["archivo"]
+        print("Archivo recibido:", prueba_file.filename)
+        prueba = pd.read_csv(prueba_file)
+        print(prueba)
+        
+        # Obtener los nombres de las columnas
+        column_names = prueba.columns.tolist()
+        
+        # Construir un string multilinea con los nombres de las columnas y los valores
+        mensaje = "      ".join(column_names) + "\n"
+        for index, row in prueba.iterrows():
+            mensaje += f"{row['image_id']}  {row['label']}\n"
+        
+        resultado = {"mensaje": mensaje}
+ 
+        return jsonify(resultado), 200
+    return None

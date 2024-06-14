@@ -20,4 +20,8 @@ export class YucaComponent {
   goToComponentD() {
     this.router.navigate(['/yuca-duplicados']);
   }
+
+  goToComponentE() {
+    this.router.navigate(['/yuca-clasificar']);
+  }
 }
