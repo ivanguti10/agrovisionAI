@@ -12,4 +12,12 @@ export class YucaComponent {
   goToComponentB() {
     this.router.navigate(['/yuca_ejemplos']);
   }
+
+  goToComponentC() {
+    this.router.navigate(['/yuca-modelo']);
+  }
+
+  goToComponentD() {
+    this.router.navigate(['/yuca-duplicados']);
+  }
 }

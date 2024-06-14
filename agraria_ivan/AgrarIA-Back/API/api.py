@@ -94,5 +94,37 @@ def yuca_route_CDM():
 def yuca_route_CBSD():
     return yca.yuca_CBSD()
 
+@app.route('/cargarModelo', methods=["GET", "POST"])
+def yuca_route_CargarModelo():
+    return yca.yuca_cargarModelo()
+
+@app.route('/cluster1', methods=["GET", "POST"])
+def yuca_route_cluster1():
+    return yca.cluster1()
+
+@app.route('/cluster2', methods=["GET", "POST"])
+def yuca_route_cluster2():
+    return yca.cluster2()
+
+@app.route('/cluster3', methods=["GET", "POST"])
+def yuca_route_cluster3():
+    return yca.cluster3()
+
+@app.route('/cluster4', methods=["GET", "POST"])
+def yuca_route_cluster4():
+    return yca.cluster4()
+
+@app.route('/cluster5', methods=["GET", "POST"])
+def yuca_route_cluster5():
+    return yca.cluster5()
+
+@app.route('/buscarDuplicados', methods=["GET", "POST"])
+def yuca_route_buscarDuplicados():
+    return yca.buscarDuplicados()
+
+@app.route('/mostrarDuplicados', methods=["GET", "POST"])
+def yuca_route_mostrarDuplicados():
+    return yca.mostrarDuplicados()
+
 if __name__ == "__main__":
     app.run(debug=True)

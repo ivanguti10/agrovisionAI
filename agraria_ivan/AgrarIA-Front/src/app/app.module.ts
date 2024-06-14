@@ -45,6 +45,8 @@ import { XaiComponent } from './components/modelos/xai/xai.component';
 import { RnnComponent } from './components/modelos/rnn/rnn.component';
 import { YucaComponent } from './components/modelos/yuca/yuca.component';
 import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
+import { YucaModeloComponent } from './components/modelos/yuca-modelo/yuca-modelo.component';
+import { YucaDuplicadosComponent } from './components/modelos/yuca-duplicados/yuca-duplicados.component';
 
 
 
@@ -62,6 +64,8 @@ import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_e
     YucaComponent,
     DialogImageComponent,
     YucaEjemplosComponent,
+    YucaModeloComponent,
+    YucaDuplicadosComponent,
     ],
   imports: [
     BrowserModule,

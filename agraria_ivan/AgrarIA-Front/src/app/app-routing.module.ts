@@ -6,6 +6,9 @@ import { XaiComponent } from './components/modelos/xai/xai.component';
 import { RnnComponent } from './components/modelos/rnn/rnn.component';
 import { YucaComponent } from './components/modelos/yuca/yuca.component';
 import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
+import { YucaModeloComponent } from './components/modelos/yuca-modelo/yuca-modelo.component';
+import { YucaDuplicadosComponent } from './components/modelos/yuca-duplicados/yuca-duplicados.component';
+
 
 
 
@@ -18,7 +21,8 @@ const routes: Routes = [
   { path: 'rnn', component: RnnComponent },
   { path: 'yuca', component: YucaComponent },
   { path: 'yuca_ejemplos', component: YucaEjemplosComponent },
-  { path: '', redirectTo: '/yuca_ejemplos', pathMatch: 'full' }, // Redirigir a ComponentA por defecto
+  { path: 'yuca-modelo', component: YucaModeloComponent },
+  { path: 'yuca-duplicados', component: YucaDuplicadosComponent },
   { path: '**', redirectTo: 'home' },
 ];
 @NgModule({
