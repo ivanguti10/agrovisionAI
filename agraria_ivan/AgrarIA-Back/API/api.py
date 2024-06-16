@@ -130,5 +130,9 @@ def yuca_route_mostrarDuplicados():
 def yuca_route_cargarPlanta():
     return yca.cargarPlanta()
 
+@app.route('/clasificarPlanta', methods=["GET", "POST"])
+def yuca_route_clasificarPlanta():
+    return yca.clasificarPlanta()
+
 if __name__ == "__main__":
     app.run(debug=True)

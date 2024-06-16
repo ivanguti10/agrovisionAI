@@ -36,8 +36,8 @@ import tensorflow as tf
 
 
 # albumentations for augs
-#import albumentations
-#from albumentations.pytorch.transforms import ToTensorV2
+import albumentations
+from albumentations.pytorch.transforms import ToTensorV2
 
 # clustering and dimension reduction
 from sklearn.cluster import KMeans
@@ -51,7 +51,7 @@ import io
 
 #torch
 import torch
-#import timm
+import timm
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
@@ -276,7 +276,128 @@ def agrupar_imagenes_por_cluster(image_ids, kmeans):
 
 
 #######################################################
+
+DIM = (384,384) #(Dimensiones de la Imagen)
+
+NUM_WORKERS = 12 #(Número de Procesos de Carga de Datos)
+TEST_BATCH_SIZE = 16  #(Tamaño del Lote para Pruebas)
+SEED = 2020 # (Semilla para la Reproducibilidad)
+
+DEVICE = "cuda" #(Dispositivo de Computación)
+
+# (Normalización de las Imágenes)
+MEAN = [0.485, 0.456, 0.406]
+STD = [0.229, 0.224, 0.225]
+
+def get_test_transforms():
+
+    return albumentations.Compose(
+        [albumentations.Normalize(MEAN, STD, max_pixel_value=255.0, always_apply=True),
+        ToTensorV2(p=1.0)
+        ]
+    )
+
+class CassavaDataset(Dataset):
+    def __init__(self,image_ids,labels,dimension=None,augmentations=None):
+        super().__init__()
+        self.image_ids = image_ids
+        self.labels = labels
+        self.dim = dimension
+        self.augmentations = augmentations
+
+    def __len__(self):
+        return len(self.image_ids)
+
+    def __getitem__(self,idx):
+
+        ruta_del_escritorio = Path(obtener_ruta_escritorio())
+
+        img = cv2.imread(str(ruta_del_escritorio/'test_images'/self.image_ids[idx]))
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+        if self.dim:
+            img = cv2.resize(img,self.dim)
+
+        if self.augmentations:
+            augmented = self.augmentations(image=img)
+            image = augmented['image']
+
+        return {
+            'image': image,
+            'target': torch.tensor(self.labels[idx],dtype=torch.float)
+        }
     
+class CassavaModel(nn.Module):
+    def __init__(self, model_name='seresnext50_32x4d', out_features=5, pretrained=True):
+        super().__init__()
+        self.model = timm.create_model(model_name, pretrained=pretrained)
+
+        # Asegúrate de cambiar 'last_linear' por 'fc' si ese es el nombre correcto
+        n_features = self.model.fc.in_features  # Cambia aquí last_linear por fc si es necesario
+        self.model.fc = nn.Linear(n_features, out_features)  # Cambia aquí last_linear por fc si es necesario
+
+    def forward(self, x):
+        x = self.model(x)
+        return x
+
+def predict_single_model(data_loader,model,device):
+    model.eval()
+    tk0 = tqdm(enumerate(data_loader), total=len(data_loader))
+    fin_out = []
+
+    with torch.no_grad():
+
+        for bi, d in tk0:
+            images = d['image']
+            targets = d['target']
+
+            images = images.to(device)
+            targets = targets.to(device)
+
+            batch_size = images.shape[0]
+
+            outputs = model(images)
+
+            fin_out.append(F.softmax(outputs, dim=1).detach().cpu().numpy())
+
+    return np.concatenate(fin_out)
+
+def predict(weights):
+
+    pred = np.zeros((len(prueba),5,5))
+
+    # Defining DataSet
+    test_dataset = CassavaDataset(
+        image_ids=prueba['image_id'].values,
+        labels=prueba['label'].values,
+        augmentations=get_test_transforms(),
+        dimension = DIM
+    )
+
+    test_loader = torch.utils.data.DataLoader(
+        test_dataset,
+        batch_size=TEST_BATCH_SIZE,
+        num_workers=NUM_WORKERS,
+        shuffle=False,
+        pin_memory=True,
+        drop_last=False,
+    )
+
+    # Defining Device
+    device = torch.device("cpu")
+
+    for i,weight in enumerate(weights):
+        # Defining Model for specific fold
+        model = CassavaModel(out_features=5,pretrained=True)
+
+        # loading weights
+        #model.load_state_dict(torch.load(weight))
+        model.to(device)
+
+        #predicting
+        pred[:,:,i] = predict_single_model(test_loader,model,device)
+
+    return pred
 
 def yuca():
 
@@ -562,8 +683,9 @@ def cargarPlanta():
         BASE_DIR = Path(__file__).resolve().parent
         prueba_file = request.files["archivo"]
         print("Archivo recibido:", prueba_file.filename)
+        global prueba
         prueba = pd.read_csv(prueba_file)
-        print(prueba)
+       
         
         # Obtener los nombres de las columnas
         column_names = prueba.columns.tolist()
@@ -576,4 +698,33 @@ def cargarPlanta():
         resultado = {"mensaje": mensaje}
  
         return jsonify(resultado), 200
+    return None
+
+
+def clasificarPlanta():
+    if request.method == "POST":
+
+        pred = predict([1])
+        print(pred)
+
+        pred = pred.mean(axis=-1)
+        print('Prediction Before Argmax',pred)
+        pred = pred.argmax(axis=1)
+        print('Final Prediction',pred)
+
+        prueba['label'] = pred
+        print(prueba.head())
+
+        # Obtener los nombres de las columnas
+        column_names = prueba.columns.tolist()
+
+                # Construir un string multilinea con los nombres de las columnas y los valores
+        mensaje = "      ".join(column_names) + "\n"
+        for index, row in prueba.iterrows():
+            mensaje += f"{row['image_id']}  {row['label']}\n"
+        
+        resultado = {"mensaje": mensaje}
+ 
+        return jsonify(resultado), 200
+    
     return None

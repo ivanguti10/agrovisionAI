@@ -19,7 +19,14 @@
           <div *ngIf="!loading && mostrarEjemplos" class="full-width">
         <!-- Mensaje de retorno del método cargarPlanta -->
         <div *ngIf="mensajeRetorno">
-            <pre>{{ mensajeRetorno }}</pre>        
+            <pre>{{ mensajeRetorno }}</pre>   
+            <div class="button-container">
+                <button mat-raised-button class="btn-morado" (click)="clasificarPlanta()">Clasificar planta</button>  
+
+            </div>
+            <div *ngIf="mensajeRetorno2">
+              <pre>{{ mensajeRetorno2 }}</pre>  
+            </div>
         </div>
             </div>
         </mat-card-content>

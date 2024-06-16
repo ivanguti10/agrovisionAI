@@ -12,11 +12,13 @@ import Swal from 'sweetalert2';
 export class YucaClasificarComponent {
 
   mensajeRetorno: string = '';
+  mensajeRetorno2: string = '';
   archivos: any;
   loading = false;
   graficos: any = [];
   archivosSeleccionados = false;
   mostrarEjemplos = false;
+
 
   constructor(private http: HttpClient, public dialog: MatDialog, public sanitizer: DomSanitizer) {}
 
@@ -74,4 +76,53 @@ export class YucaClasificarComponent {
   
   }
 
+  clasificarPlanta(): void {
+    this.loading = true;
+    this.mostrarEjemplos = false;
+
+    if (!this.archivos || this.archivos.length === 0) {
+      this.archivosSeleccionados = false;
+      this.loading = false;
+      return;
+    }
+
+    this.archivosSeleccionados = true;
+    const formData = new FormData();
+    for (let i = 0; i < this.archivos.length; i++) {
+      formData.append('archivo', this.archivos[i]);
+    }
+
+    
+    this.http.post<any>('http://127.0.0.1:5000/clasificarPlanta', formData).subscribe(
+      (response) => {
+        // Este bloque se ejecuta si el modelo se carga correctamente
+        this.graficos = response;
+        this.mensajeRetorno2 = response.mensaje; // Almacenar el mensaje de duplicados
+        this.loading = false;
+        this.mostrarEjemplos = true;
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Se han cargado las características del modelo',
+          showConfirmButton: false,
+          timer: 2000,
+          backdrop: false
+        });
+      },
+      (error) => {
+        // Este bloque se ejecuta en caso de error
+        this.loading = false;
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error', // Cambiado a 'error' para reflejar el fallo
+          title: 'Error al cargar el modelo',
+          text: 'Por favor, inténtalo de nuevo.', // Mensaje adicional opcional
+          showConfirmButton: true,
+          timer: 5000, // Ajusta el tiempo según necesites
+          backdrop: true
+        });
+      }
+    );
+
+  }
 }
