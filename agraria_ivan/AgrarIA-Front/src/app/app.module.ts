@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { GraphsComponent } from './components/graphs/graphs.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular Material
@@ -41,8 +40,6 @@ import { DialogImageComponent } from './components/shared/dialog-image/dialog-im
 import { DialogContentComponent } from './components/shared/dialog-content/dialog-content.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { XaiComponent } from './components/modelos/xai/xai.component';
-import { RnnComponent } from './components/modelos/rnn/rnn.component';
 import { YucaComponent } from './components/modelos/yuca/yuca.component';
 import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
 import { YucaModeloComponent } from './components/modelos/yuca-modelo/yuca-modelo.component';
@@ -56,11 +53,8 @@ import { YucaClasificarComponent } from './components/modelos/yuca-clasificar/yu
   declarations: [
     AppComponent,
     HomeComponent,
-    GraphsComponent,
     DialogContentComponent,
     NavbarComponent,
-    XaiComponent,
-    RnnComponent,
     DialogImageComponent,
     YucaComponent,
     DialogImageComponent,

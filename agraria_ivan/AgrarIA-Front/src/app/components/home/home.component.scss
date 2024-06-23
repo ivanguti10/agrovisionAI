@@ -3,3 +3,16 @@ iframe {
   height: auto; // O cualquier altura que desee asignar
   border: none; // Para eliminar cualquier borde por defecto
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../modelos/yuca/yucaFondo.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}

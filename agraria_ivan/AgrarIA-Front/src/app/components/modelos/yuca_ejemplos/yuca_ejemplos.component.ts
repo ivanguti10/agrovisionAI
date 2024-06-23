@@ -73,7 +73,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Se han generado los gráficos',
+          title: 'Se han mostrado las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -84,7 +84,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Error al generar los gráficos',
+          title: 'Error al mostrar las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -117,7 +117,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Se han generado los gráficos',
+          title: 'Se han mostrado las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -128,7 +128,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Error al generar los gráficos',
+          title: 'Error al mostrar las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -161,7 +161,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Se han generado los gráficos',
+          title: 'Se han mostrado las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -172,7 +172,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Error al generar los gráficos',
+          title: 'Error al mostrar las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -205,7 +205,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Se han generado los gráficos',
+          title: 'Se han mostrado las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -216,7 +216,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Error al generar los gráficos',
+          title: 'Error al mostrar las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -249,7 +249,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Se han generado los gráficos',
+          title: 'Se han mostrado las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
@@ -260,7 +260,7 @@ export class YucaEjemplosComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Error al generar los gráficos',
+          title: 'Error al mostrar las plantas',
           showConfirmButton: false,
           timer: 2000,
           backdrop: false
