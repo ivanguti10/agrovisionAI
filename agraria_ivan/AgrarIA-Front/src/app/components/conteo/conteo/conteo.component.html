@@ -1,0 +1,23 @@
+<body>
+    <div class="file-upload-container">
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupFile01">Subir</label>
+        <input type="file" class="form-control" id="inputGroupFile01" (change)="onFileChange($event, 'input1')">
+        <button class="btn btn-view-image styled-button" (click)="viewImage('input1')">Ver Imagen</button>
+      </div>
+    </div>
+    </body>
+    
+<div>
+    <div class="images">
+      <div class="image-row">
+        <img *ngIf="images[0]" [src]="images[0]" alt="Image 1" />
+        <img *ngIf="images[1]" [src]="images[1]" alt="Image 2" />
+      </div>
+      <div class="image-row">
+        <img *ngIf="images[2]" [src]="images[2]" alt="Image 3" />
+        <img *ngIf="images[3]" [src]="images[3]" alt="Image 4" />
+      </div>
+    </div>
+  </div>
+  

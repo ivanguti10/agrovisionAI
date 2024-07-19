@@ -34,6 +34,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { ReactiveFormsModule } from '@angular/forms';  // Asegúrate de importar esto
+
 
 
 import { DialogImageComponent } from './components/shared/dialog-image/dialog-image.component';
@@ -45,6 +47,7 @@ import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_e
 import { YucaModeloComponent } from './components/modelos/yuca-modelo/yuca-modelo.component';
 import { YucaDuplicadosComponent } from './components/modelos/yuca-duplicados/yuca-duplicados.component';
 import { YucaClasificarComponent } from './components/modelos/yuca-clasificar/yuca-clasificar.component';
+import { ConteoComponent } from './components/conteo/conteo/conteo.component';
 
 
 
@@ -62,6 +65,7 @@ import { YucaClasificarComponent } from './components/modelos/yuca-clasificar/yu
     YucaModeloComponent,
     YucaDuplicadosComponent,
     YucaClasificarComponent,
+    ConteoComponent,
     ],
   imports: [
     BrowserModule,
@@ -94,6 +98,8 @@ import { YucaClasificarComponent } from './components/modelos/yuca-clasificar/yu
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    ReactiveFormsModule  // Asegúrate de incluir esto en los imports
+
   ],
 
   providers: [],
