@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular Material
 
@@ -57,7 +56,6 @@ import { ConteoComponent } from './components/conteo/conteo/conteo.component';
     AppComponent,
     HomeComponent,
     DialogContentComponent,
-    NavbarComponent,
     DialogImageComponent,
     YucaComponent,
     DialogImageComponent,
