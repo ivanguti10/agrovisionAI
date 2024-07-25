@@ -1,504 +1,3229 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Freelancer - Start Bootstrap Theme</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="home.component.scss" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap CSS -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Freelancer - Start Bootstrap Theme</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="home.component.scss" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-  <!-- FontAwesome for icons -->
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">Agro Vision AI</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#plagas">Plagas</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="../../../assets/AgroVisionLogo.png" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Agro Vision AI</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light" >
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Plagas - Deep Learning - Agricultura</p>
-            </div>
-        </header>
-        <section class="page-section plagas" id="plagas">
-          <div class="container">
-              <!-- plagas Section Heading-->
-              <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">PLAGAS</h2>
-              <!-- Icon Divider-->
-              <div class="divider-custom">
-                  <div class="divider-custom-line"></div>
-                  <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                  <div class="divider-custom-line"></div>
-              </div>
+    <!-- FontAwesome for icons -->
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">Agro Vision AI</a>
+        <button
+          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#plagas"
+                >Plagas</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#predeccir"
+                >Predeccir Plaga</a
+              >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img
+          class="masthead-avatar mb-5"
+          src="../../../assets/AgroVisionLogo.png"
+          alt="..."
+        />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Agro Vision AI</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">
+          Plagas - Deep Learning - Agricultura
+        </p>
+      </div>
+    </header>
+    <section class="page-section plagas" id="plagas">
+      <div class="container">
+        <!-- plagas Section Heading-->
+        <h2
+          class="page-section-heading text-center text-uppercase text-secondary mb-0"
+        >
+          PLAGAS
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
         <!-- plagas Grid Items-->
-<div class="row justify-content-center">
-    <!-- plagas Item 1-->
-    <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal1">
-        <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div class="plagas-item-title">Apple Scab</div>
-        <img class="img-fluid" src="../../../assets/img/plagas/apple scab.jpg" alt="Apple Scab" />
-    </div>
-    <!-- plagas Item 2-->
-    <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal2">
-        <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div class="plagas-item-title">Apple Black rot</div>
-        <img class="img-fluid" src="../../../assets/img/plagas/apple black rot.jpg" alt="Apple Black rot" />
-    </div>
-    <!-- plagas Item 3-->
-    <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal3">
-        <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div class="plagas-item-title">Roya del cedro y del manzano</div>
-        <img class="img-fluid" src="../../../assets/img/plagas/roya cedro.jpg" alt="Roya" />
-    </div>
-    <!-- plagas Item 4-->
-    <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal4">
-        <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div class="plagas-item-title">Manzano sano</div>
-        <img class="img-fluid" src="../../../assets/img/plagas/manzano sana.jpg" alt="manzano sano" />
-    </div>
-    <!-- plagas Item 5-->
-    <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal5">
-        <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div class="plagas-item-title">Arandano</div>
-        <img class="img-fluid" src="../../../assets/img/plagas/Arandano.png" alt="Arandano" />
-    </div>
-    <!-- plagas Item 6-->
-    <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal6">
-        <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-            <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div class="plagas-item-title">Cereza</div>
-        <img class="img-fluid" src="../../../assets/img/plagas/cereza.jpg" alt="cereza" />
-    </div>
-        <!-- plagas Item 7-->
-        <div class="plagas-item mx-auto" data-bs-toggle="modal" data-bs-target="#plagasModal7">
-            <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                <div class="plagas-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+        <div class="row justify-content-center">
+          <!-- plagas Item 1-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal1"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Apple Scab</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/apple scab.jpg"
+              alt="Apple Scab"
+            />
+          </div>
+          <!-- plagas Item 2-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal2"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Apple Black rot</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/apple black rot.jpg"
+              alt="Apple Black rot"
+            />
+          </div>
+          <!-- plagas Item 3-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal3"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Roya del cedro y del manzano</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/roya cedro.jpg"
+              alt="Roya"
+            />
+          </div>
+          <!-- plagas Item 4-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal4"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Manzano sano</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/manzano sana.jpg"
+              alt="manzano sano"
+            />
+          </div>
+          <!-- plagas Item 5-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal5"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Arandano</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Arandano.png"
+              alt="Arandano"
+            />
+          </div>
+          <!-- plagas Item 6-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal6"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Cereza</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/cereza.jpg"
+              alt="cereza"
+            />
+          </div>
+          <!-- plagas Item 7-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal7"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
             </div>
             <div class="plagas-item-title">Oidio Cerezo</div>
-            <img class="img-fluid" src="../../../assets/img/plagas/oidio cerezo.jpg" alt="oidio cerezo" />
-        </div>
-</div>
-
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/oidio cerezo.jpg"
+              alt="oidio cerezo"
+            />
           </div>
-        </section>
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
-                </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download me-2"></i>
-                        Free Download!
-                    </a>
-                </div>
+          <!-- plagas Item 8-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal8"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
             </div>
-        </section>
-        <!-- Contact Section-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Form-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" >Send</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="plagas-item-title">Prodedumbre negra de la Uva</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Prodedumbre negra de la Uva.jpg"
+              alt="Prodedumbre negra de la Uva"
+            />
+          </div>
+          <!-- plagas Item 9-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal9"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            3007 Iván Gutiérrez Gil
-                            <br />
-                            Salamanca, Spain
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <br>
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/iv%C3%A1n-guti%C3%A9rrez-gil-628188231/">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>                        
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://drive.google.com/drive/folders/1OGTUW4Eu-AbdAPuwV4dWpjI7_es9QYnl?usp=sharing"><i class="fab fa-google-drive"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/ivanguti10"><i class="fab fa-github"></i></a>
-                    </div>
-                    
+            <div class="plagas-item-title">Madera de la Vid</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Madera de la vid.jpg"
+              alt="Madera de la Vid"
+            />
+          </div>
+          <!-- plagas Item 10-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal10"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Hoja de Vid sana</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Hoja de Vid sana.jpg"
+              alt="Hoja de Vid sana"
+            />
+          </div>
+          <!-- plagas Item 11-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal11"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Tizon de la Vid</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Tizon de la Vid.png"
+              alt="Tizon de la Vid"
+            />
+          </div>
+          <!-- plagas Item 12-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal12"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Enfermedad del Dragon Amarillo</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Enfermedad del Dragon Amarillo.jpg"
+              alt="Enfermedad del Dragon Amarillo"
+            />
+          </div>
+          <!-- plagas Item 13-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal13"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Mancha bacteriana del Melocoton</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Mancha bacteriana del Melocoton.jpg"
+              alt="Mancha bacteriana del Melocoton"
+            />
+          </div>
+          <!-- plagas Item 14-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal14"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Melocoton</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Melocoton.jpeg"
+              alt="Melocoton"
+            />
+          </div>
+          <!-- plagas Item 15-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal15"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Mancha bacteriana Pimiento</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Mancha bacteriana Pimiento.jpg"
+              alt="Mancha bacteriana Pimiento"
+            />
+          </div>
+          <!-- plagas Item 16-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal16"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Pimiento</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Pimiento sano.jpg"
+              alt="Pimiento"
+            />
+          </div>
+          <!-- plagas Item 17-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal17"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Tizon temprano de la Patata</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Tizon temprano de la Patata.png"
+              alt=" Tizon temprano de la Patata"
+            />
+          </div>
 
-                </div>
+          <!-- plagas Item 18-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal18"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
             </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+            <div class="plagas-item-title">Patata</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Patata.jpg"
+            />
+          </div>
+
+          <!-- plagas Item 19-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal19"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Tizon tardio de Patata</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Tizon tardio de Patata.jpeg"
+            />
+          </div>
+          <!-- plagas Item 20-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal20"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Frambuesa</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Frambuesa.jpg"
+            />
+          </div>
+          <!-- plagas Item 21-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal21"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Frijol</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Frijol.jpeg"
+            />
+          </div>
+          <!-- plagas Item 22-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal22"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Oidio de Calabaza</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Oidio de Calabaza.jpg"
+            />
+          </div>
+          <!-- plagas Item 23-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal23"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Fresa</div>
+            <img class="img-fluid" src="../../../assets/img/plagas/Fresa.jpg" />
+          </div>
+          <!-- plagas Item 24-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal24"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Quemadura de Fresa</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Quemadura de Fresa.jpg"
+            />
+          </div>
+          <!-- plagas Item 25-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal25"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Mancha bacteriana del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Mancha bacteriana del Tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 26-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal26"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Tizon temprano del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Tizon temprano del Tomate.jpeg"
+            />
+          </div>
+          <!-- plagas Item 27-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal27"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 28-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal28"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Tizon tardio del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Tizon tardio del Tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 29-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal29"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Mildiu del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Mildiu del Tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 30-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal30"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Septoriosis del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Septoriosis del Tomate.jpeg"
+            />
+          </div>
+          <!-- plagas Item 31-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal31"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Araña roja del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Araña roja del Tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 32-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal32"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Mancha de diana del Tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Mancha de diana del Tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 33-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal33"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">Virus del mosaico del tomate</div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Virus del mosaico del tomate.jpg"
+            />
+          </div>
+          <!-- plagas Item 34-->
+          <div
+            class="plagas-item mx-auto"
+            data-bs-toggle="modal"
+            data-bs-target="#plagasModal34"
+          >
+            <div
+              class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            >
+              <div class="plagas-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <div class="plagas-item-title">
+              Virus del rizado amarillo del tomate
+            </div>
+            <img
+              class="img-fluid"
+              src="../../../assets/img/plagas/Virus del rizado amarillo del tomate.jpeg"
+            />
+          </div>
+          <!-- Copiar pegar hasta aqui -->
         </div>
-        <!-- plagas Modals-->
-        <!-- plagas Modal 1-->
-        <div class="plagas-modal modal fade" id="plagasModal1" tabindex="-1" aria-labelledby="plagasModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">Apple Scab</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="../../../assets/img/plagas/apple scab.jpg" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">Apple scab es una enfermedad fúngica causada por Venturia inaequalis que afecta principalmente a los manzanos. Provoca manchas oscuras en hojas y frutos, disminuyendo la calidad de la cosecha. Las esporas del hongo se propagan en condiciones húmedas y frescas. Para su control, se recomienda la poda adecuada, eliminación de restos infectados y aplicación de fungicidas específicos.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+      </div>
+    </section>
+    <!-- Predeccir Section-->
+    <section class="page-section bg-primary text-white mb-0" id="predeccir">
+      <div class="container">
+        <!-- Predeccir Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">
+          Predeccir Plaga
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Predeccir Section Content-->
+        <div class="row">
+          <div class="col-lg-4 ms-auto">
+            <div class="container mt-5">
+              <h2 class="text-center mb-4">Carga la imagen que deseas predecir</h2>
+              <div class="card">
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Seleccionar Imagen</label>
+                      <input class="form-control" type="file" id="formFile" (change)="onFileSelected($event)">
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- plagas Modal 2-->
-        <div class="plagas-modal modal fade" id="plagasModal2" tabindex="-1" aria-labelledby="plagasModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">Apple Black Rot</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="../../../assets/img/plagas/apple black rot.jpg" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">
-                                        Apple black rot es una enfermedad fúngica causada por Botryosphaeria obtusa, que afecta a los manzanos. Produce manchas negras en hojas, ramas y frutos, reduciendo la calidad de la cosecha. Para controlarla, se recomienda poda adecuada, eliminación de restos infectados y uso de fungicidas específicos.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="mb-3" *ngIf="imagePreview">
+                      <img [src]="imagePreview" alt="Vista Previa" class="img-thumbnail" style="max-width: 200px">
                     </div>
+                    <button class="btn btn-primary" [disabled]="!imagePreview" (click)="refreshPage()">
+                      <i class="fas fa-sync-alt"></i> 
+                  </button>                  </form>
                 </div>
+              </div>
             </div>
-        </div>
-        <!-- plagas Modal 3-->
-        <div class="plagas-modal modal fade" id="plagasModal3" tabindex="-1" aria-labelledby="plagasModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
+
+            <div class="modal fade" id="predictionModal" tabindex="-1" aria-labelledby="predictionModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">Roya del cedro y del manzano</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="../../../assets/img/plagas/roya cedro.jpg" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">La roya del cedro y del manzano es una enfermedad fúngica causada por Gymnosporangium juniperi-virginianae, que afecta a manzanos y cedros. Provoca manchas naranjas en las hojas y deformaciones en los frutos, reduciendo la calidad de la cosecha. Para su control, se recomienda eliminar restos infectados, separar manzanos y cedros, y aplicar fungicidas específicos.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
+                  <div class="modal-header border-0">
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center pb-5">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-8" *ngIf="predictionResult">
+                          <h2 class="modal-title text-secondary text-uppercase mb-0" id="predictionModalLabel">
+                            {{ predictionResult.title }}
+                          </h2>
+                          <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                            <div class="divider-custom-line"></div>
+                          </div>
+                          <p class="confidence">Confianza de la predicción: {{ predictionResult.confidence }}%</p>
+                          <p class="mb-4 prediction-description" [innerHTML]="predictionResult.description"></p>
+                          <img class="img-fluid rounded mb-5 modal-img" [src]="predictionResult.imageUrl" alt="{{ predictionResult.title }}">
+                          <br>
+                          <button class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i> Close Window</button>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            
+            
+          </div>
         </div>
-        <!-- plagas Modal 4-->
-        <div class="plagas-modal modal fade" id="plagasModal4" tabindex="-1" aria-labelledby="plagasModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">Manzano sano</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="../../../assets/img/plagas/manzano sana.jpg" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">
-                                        Las hojas del manzano son esenciales para la fotosíntesis y el crecimiento del árbol. Son de forma ovalada y bordes dentados, con una textura suave y un color verde brillante. La salud de las hojas es crucial, ya que reflejan el bienestar general del manzano y su capacidad para producir frutos de calidad</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Sección de resultado de la predicción -->
+        <div class="text-center mt-4">
+          <div class="container mt-5 text-center">
+            <button class="btn btn-primary btn-lg-custom" [disabled]="!imagePreview" (click)="predict()">
+              Predecir Plaga
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section-->
+    <section class="page-section" id="contact">
+      <div class="container">
+        <!-- Contact Section Heading-->
+        <h2
+          class="page-section-heading text-center text-uppercase text-secondary mb-0"
+        >
+          Contact Me
+        </h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <!-- Contact Section Form-->
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-xl-7">
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- * * SB Forms Contact Form * *-->
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- This form is pre-integrated with SB Forms.-->
+            <!-- To make this form functional, sign up at-->
+            <!-- https://startbootstrap.com/solution/contact-forms-->
+            <!-- to get an API token!-->
+            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+              <!-- Name input-->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name..."
+                  data-sb-validations="required"
+                />
+                <label for="name">Full name</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">
+                  A name is required.
+                </div>
+              </div>
+              <!-- Email address input-->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  data-sb-validations="required,email"
+                />
+                <label for="email">Email address</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">
+                  An email is required.
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">
+                  Email is not valid.
+                </div>
+              </div>
+              <!-- Phone number input-->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="phone"
+                  type="tel"
+                  placeholder="(123) 456-7890"
+                  data-sb-validations="required"
+                />
+                <label for="phone">Phone number</label>
+                <div class="invalid-feedback" data-sb-feedback="phone:required">
+                  A phone number is required.
+                </div>
+              </div>
+              <!-- Message input-->
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  type="text"
+                  placeholder="Enter your message here..."
+                  style="height: 10rem"
+                  data-sb-validations="required"
+                ></textarea>
+                <label for="message">Message</label>
+                <div
+                  class="invalid-feedback"
+                  data-sb-feedback="message:required"
+                >
+                  A message is required.
+                </div>
+              </div>
+              <!-- Submit success message-->
+              <!---->
+              <!-- This is what your users will see when the form-->
+              <!-- has successfully submitted-->
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                  <div class="fw-bolder">Form submission successful!</div>
+                  To activate this form, sign up at
+                  <br />
+                  <a href="https://startbootstrap.com/solution/contact-forms"
+                    >https://startbootstrap.com/solution/contact-forms</a
+                  >
+                </div>
+              </div>
+              <!-- Submit error message-->
+              <!---->
+              <!-- This is what your users will see when there is-->
+              <!-- an error submitting the form-->
+              <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">
+                  Error sending message!
+                </div>
+              </div>
+              <!-- Submit Button-->
+              <button
+                class="btn btn-primary btn-xl disabled"
+                id="submitButton"
+                type="submit"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <!-- Footer Location-->
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">
+              3007 Iván Gutiérrez Gil
+              <br />
+              Salamanca, Spain
+            </p>
+          </div>
+          <!-- Footer Social Icons-->
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <br />
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://www.linkedin.com/in/iv%C3%A1n-guti%C3%A9rrez-gil-628188231/"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://drive.google.com/drive/folders/1OGTUW4Eu-AbdAPuwV4dWpjI7_es9QYnl?usp=sharing"
+              ><i class="fab fa-google-drive"></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="https://github.com/ivanguti10"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; Your Website 2023</small>
+      </div>
+    </div>
+    <!-- plagas Modals-->
+    <!-- plagas Modal 1-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal1"
+      tabindex="-1"
+      aria-labelledby="plagasModal1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Apple Scab
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="../../../assets/img/plagas/apple scab.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    Apple scab es una enfermedad fúngica causada por Venturia
+                    inaequalis que afecta principalmente a los manzanos. Provoca
+                    manchas oscuras en hojas y frutos, disminuyendo la calidad
+                    de la cosecha. Las esporas del hongo se propagan en
+                    condiciones húmedas y frescas. Para su control, se
+                    recomienda la poda adecuada, eliminación de restos
+                    infectados y aplicación de fungicidas específicos.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- plagas Modal 5-->
-        <div class="plagas-modal modal fade" id="plagasModal5" tabindex="-1" aria-labelledby="plagasModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">Arandano</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="../../../assets/img/plagas/Arandano.png" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">Las hojas del arándano son fundamentales para la fotosíntesis y el crecimiento de la planta. Son pequeñas, ovaladas y de bordes lisos, con un color verde brillante que cambia a tonos rojizos en otoño. La salud de las hojas es vital, ya que indican el estado general de la planta y su capacidad para producir frutos de alta calidad.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 2-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal2"
+      tabindex="-1"
+      aria-labelledby="plagasModal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Apple Black Rot
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="../../../assets/img/plagas/apple black rot.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    Apple black rot es una enfermedad fúngica causada por
+                    Botryosphaeria obtusa, que afecta a los manzanos. Produce
+                    manchas negras en hojas, ramas y frutos, reduciendo la
+                    calidad de la cosecha. Para controlarla, se recomienda poda
+                    adecuada, eliminación de restos infectados y uso de
+                    fungicidas específicos.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- plagas Modal 6-->
-        <div class="plagas-modal modal fade" id="plagasModal6" tabindex="-1" aria-labelledby="plagasModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">cereza</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="../../../assets/img/plagas/cereza.jpg" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">
-                                        Las hojas del cerezo son cruciales para la fotosíntesis y el crecimiento del árbol. Son de forma ovalada con bordes serrados, de color verde brillante que puede cambiar a tonos amarillos y rojos en otoño. La salud de las hojas es esencial, ya que reflejan el bienestar general del cerezo y su capacidad para producir cerezas de calidad.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 3-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal3"
+      tabindex="-1"
+      aria-labelledby="plagasModal3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Roya del cedro y del manzano
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="../../../assets/img/plagas/roya cedro.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La roya del cedro y del manzano es una enfermedad fúngica
+                    causada por Gymnosporangium juniperi-virginianae, que afecta
+                    a manzanos y cedros. Provoca manchas naranjas en las hojas y
+                    deformaciones en los frutos, reduciendo la calidad de la
+                    cosecha. Para su control, se recomienda eliminar restos
+                    infectados, separar manzanos y cedros, y aplicar fungicidas
+                    específicos.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-           <!-- plagas Modal 6-->
-           <div class="plagas-modal modal fade" id="plagasModal7" tabindex="-1" aria-labelledby="plagasModal7" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-6">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- plagas Modal - Title-->
-                                    <h2 class="plagas-modal-title text-secondary text-uppercase mb-0">Oidio del Cerezo</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- plagas Modal - Image-->
-                                    <img class="img-fluid rounded mb-7" src="../../../assets/img/plagas/oidio cerezo.jpg" alt="..." />
-                                    <!-- plagas Modal - Text-->
-                                    <p class="mb-4">
-                                        
-El oídio del cerezo es una enfermedad fúngica causada por Podosphaera clandestina, que afecta a las hojas, flores y frutos del cerezo. Se manifiesta como un polvo blanco en la superficie de las hojas, provocando deformaciones y debilitamiento del árbol. Para controlar esta enfermedad, se recomienda la poda adecuada, la eliminación de restos infectados y la aplicación de fungicidas específicos.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 4-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal4"
+      tabindex="-1"
+      aria-labelledby="plagasModal4"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Manzano sano
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
                     </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="../../../assets/img/plagas/manzano sana.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    Las hojas del manzano son esenciales para la fotosíntesis y
+                    el crecimiento del árbol. Son de forma ovalada y bordes
+                    dentados, con una textura suave y un color verde brillante.
+                    La salud de las hojas es crucial, ya que reflejan el
+                    bienestar general del manzano y su capacidad para producir
+                    frutos de calidad
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../../../assets/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-          <!-- Bootstrap JS and dependencies -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
+      </div>
+    </div>
+    <!-- plagas Modal 5-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal5"
+      tabindex="-1"
+      aria-labelledby="plagasModal5"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Arandano
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="../../../assets/img/plagas/Arandano.png"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    Las hojas del arándano son fundamentales para la
+                    fotosíntesis y el crecimiento de la planta. Son pequeñas,
+                    ovaladas y de bordes lisos, con un color verde brillante que
+                    cambia a tonos rojizos en otoño. La salud de las hojas es
+                    vital, ya que indican el estado general de la planta y su
+                    capacidad para producir frutos de alta calidad.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 6-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal6"
+      tabindex="-1"
+      aria-labelledby="plagasModal6"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    cereza
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="../../../assets/img/plagas/cereza.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    Las hojas del cerezo son cruciales para la fotosíntesis y el
+                    crecimiento del árbol. Son de forma ovalada con bordes
+                    serrados, de color verde brillante que puede cambiar a tonos
+                    amarillos y rojos en otoño. La salud de las hojas es
+                    esencial, ya que reflejan el bienestar general del cerezo y
+                    su capacidad para producir cerezas de calidad.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 7-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal7"
+      tabindex="-1"
+      aria-labelledby="plagasModal7"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Prodedumbre negra de la Uva.
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/oidio cerezo.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El oídio del cerezo es una enfermedad fúngica causada por
+                    Podosphaera clandestina, que afecta a las hojas, flores y
+                    frutos del cerezo. Se manifiesta como un polvo blanco en la
+                    superficie de las hojas, provocando deformaciones y
+                    debilitamiento del árbol. Para controlar esta enfermedad, se
+                    recomienda la poda adecuada, la eliminación de restos
+                    infectados y la aplicación de fungicidas específicos.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 8-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal8"
+      tabindex="-1"
+      aria-labelledby="plagasModal8"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Prodedumbre negra de la Uva
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Prodedumbre negra de la Uva.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La prodedumbre negra de la uva es una enfermedad causada por
+                    el hongo Guignardia bidwellii. Afecta a las vides en climas
+                    cálidos y húmedos, manifestándose como manchas negras en
+                    hojas, tallos y frutos. Esto puede reducir tanto la calidad
+                    como la cantidad de la cosecha. Los síntomas incluyen
+                    lesiones oscuras en hojas y frutos, y cancros en sarmientos.
+                    Su control se basa en la poda adecuada, el uso de fungicidas
+                    específicos y la eliminación de material vegetal infectado.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 9-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal9"
+      tabindex="-1"
+      aria-labelledby="plagasModal9"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Madera de la Vid
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Madera de la vid.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La madera de la vid es fundamental para el soporte y
+                    transporte de nutrientes en la planta. Su salud es crucial,
+                    ya que enfermedades como la esca y la eutipiosis pueden
+                    reducir la productividad. El manejo adecuado incluye poda,
+                    tratamiento de heridas y monitoreo para prevenir infecciones
+                    y asegurar una producción óptima de uvas.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 10-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal10"
+      tabindex="-1"
+      aria-labelledby="plagasModal10"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Hoja de Vid sana
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Hoja de Vid sana.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja de vid es vital para la fotosíntesis y el
+                    crecimiento de la planta. Su salud afecta directamente la
+                    producción de uvas. Enfermedades como el mildiu y el oídio
+                    pueden dañar las hojas, reduciendo la eficiencia
+                    fotosintética. El manejo adecuado incluye la vigilancia
+                    constante, tratamientos preventivos y la eliminación de
+                    hojas afectadas para mantener la planta saludable y
+                    productiva.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 11-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal11"
+      tabindex="-1"
+      aria-labelledby="plagasModal11"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Tizon de la Vid
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Tizon de la Vid.png"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El tizón de la vid es una enfermedad causada por hongos que
+                    afecta hojas, sarmientos y frutos. Los síntomas incluyen
+                    manchas oscuras y necrosis, lo que reduce la calidad y
+                    cantidad de la cosecha. El manejo adecuado implica el uso de
+                    fungicidas, la poda correcta y la eliminación de partes
+                    infectadas para controlar su propagación y asegurar una
+                    producción saludable de uvas.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 12-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal12"
+      tabindex="-1"
+      aria-labelledby="plagasModal12"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Enfermedad del Dragon Amarillo
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Enfermedad del Dragon Amarillo.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La enfermedad del dragón amarillo, también conocida como
+                    HLB, es una grave patología que afecta a los cítricos.
+                    Causada por la bacteria Candidatus Liberibacter, provoca
+                    amarillamiento de las hojas, deformación de los frutos y
+                    muerte de la planta. No tiene cura conocida, por lo que su
+                    manejo se centra en la detección temprana, eliminación de
+                    plantas infectadas y control de vectores.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 13-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal13"
+      tabindex="-1"
+      aria-labelledby="plagasModal13"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Mancha bacteriana del Melocoton
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Mancha bacteriana del Melocoton.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La mancha bacteriana del melocotón es una enfermedad causada
+                    por Xanthomonas campestris. Afecta las hojas, frutos y
+                    ramas, causando manchas oscuras y a menudo un aspecto
+                    grasoso en las hojas. Esta enfermedad reduce la calidad del
+                    fruto y puede llevar a la caída prematura. El manejo incluye
+                    el uso de variedades resistentes, la aplicación de
+                    bactericidas y prácticas culturales como la poda y la
+                    eliminación de partes infectadas para minimizar la
+                    propagación.
+                  </p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="fas fa-xmark fa-fw"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 14-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal14"
+      tabindex="-1"
+      aria-labelledby="plagasModal14"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Melocoton
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Melocoton.jpeg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja de melocotón es vital para la fotosíntesis y la
+                    salud general del árbol. De forma lanceolada y de color
+                    verde brillante, estas hojas son susceptibles a enfermedades
+                    como la mancha bacteriana y el rizado. Mantener la salud de
+                    las hojas es crucial, lo que implica monitoreo regular, poda
+                    adecuada y tratamientos preventivos contra plagas y
+                    enfermedades. Las hojas sanas aseguran una mejor calidad y
+                    producción de los frutos.
+
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 15-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal15"
+      tabindex="-1"
+      aria-labelledby="plagasModal15"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Mancha bacteriana Pimiento
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Mancha bacteriana Pimiento.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La mancha bacteriana del pimiento es una enfermedad causada
+                    por Xanthomonas campestris pv. vesicatoria. Afecta las
+                    hojas, tallos y frutos, provocando manchas oscuras y
+                    hundidas, que reducen la calidad del producto y pueden
+                    causar la caída prematura de hojas y frutos. El manejo
+                    efectivo incluye el uso de variedades resistentes, la
+                    aplicación de bactericidas y prácticas culturales como la
+                    rotación de cultivos y la eliminación de plantas infectadas
+                    para minimizar la propagación de la enfermedad.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 16-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal16"
+      tabindex="-1"
+      aria-labelledby="plagasModal16"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Pimiento
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Pimiento sano.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja del pimiento es fundamental para la fotosíntesis y
+                    el crecimiento de la planta. De forma ovalada y de color
+                    verde brillante, estas hojas son susceptibles a enfermedades
+                    como la mancha bacteriana y el mildiu. Mantener la salud de
+                    las hojas implica monitoreo regular, aplicación de
+                    tratamientos preventivos y control de plagas. Hojas sanas
+                    garantizan una mejor calidad y productividad en la cosecha
+                    de pimientos.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 17-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal17"
+      tabindex="-1"
+      aria-labelledby="plagasModal17"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Tizon temprano de la Patata
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Tizon temprano de la Patata.png"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El tizón temprano de la patata es una enfermedad causada por
+                    el hongo Alternaria solani. Afecta principalmente las hojas,
+                    causando manchas oscuras con anillos concéntricos, lo que
+                    puede llevar a una defoliación prematura. Esta enfermedad
+                    reduce la calidad y cantidad de la cosecha. El manejo
+                    incluye el uso de fungicidas específicos, la rotación de
+                    cultivos y la eliminación de restos vegetales infectados
+                    para controlar la propagación del hongo.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 18-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal18"
+      tabindex="-1"
+      aria-labelledby="plagasModal18"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Patata
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Patata.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja de la patata es esencial para la fotosíntesis y el
+                    crecimiento de la planta. De forma compuesta y color verde
+                    intenso, estas hojas son vulnerables a enfermedades como el
+                    tizón temprano y tardío. Mantener la salud de las hojas
+                    implica monitoreo regular, aplicación de tratamientos
+                    preventivos y control de plagas. Hojas sanas son cruciales
+                    para asegurar una cosecha abundante y de alta calidad de
+                    patatas.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 19-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal19"
+      tabindex="-1"
+      aria-labelledby="plagasModal19"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Tizon tardio de Patata
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Tizon tardio de Patata.jpeg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El tizón tardío de la patata, causado por Phytophthora
+                    infestans, provoca manchas marrones y lesiones acuosas en
+                    hojas, tallos y tubérculos, pudiendo destruir cultivos
+                    rápidamente. El manejo incluye variedades resistentes,
+                    fungicidas específicos y prácticas culturales como la
+                    rotación de cultivos y eliminación de residuos infectados.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 20-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal20"
+      tabindex="-1"
+      aria-labelledby="plagasModal20"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Frambuesa
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Frambuesa.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja de frambuesa es vital para la fotosíntesis y el
+                    desarrollo de la planta. De forma ovalada y dentada, con un
+                    color verde brillante, es susceptible a enfermedades como el
+                    mildiú polvoriento y la roya. Mantener la salud de las hojas
+                    implica monitoreo regular, aplicación de tratamientos
+                    preventivos y control de plagas. Hojas sanas garantizan una
+                    producción abundante y de alta calidad de frambuesas.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 21-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal21"
+      tabindex="-1"
+      aria-labelledby="plagasModal21"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Frijol
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Frijol.jpeg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja de frijol es esencial para la fotosíntesis y el
+                    crecimiento de la planta. De forma trifoliada y color verde,
+                    es vulnerable a enfermedades como la antracnosis y el
+                    mildiú. Mantener la salud de las hojas requiere monitoreo
+                    regular, tratamientos preventivos y control de plagas. Hojas
+                    sanas son cruciales para asegurar una cosecha abundante y de
+                    calidad en los frijoles..
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 22-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal22"
+      tabindex="-1"
+      aria-labelledby="plagasModal22"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Oidio de Calabaza
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Oidio de Calabaza.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El oídio de la calabaza es una enfermedad causada por hongos
+                    como Podosphaera xanthii y Erysiphe cichoracearum. Se
+                    manifiesta como un polvo blanco en la superficie de las
+                    hojas, afectando la fotosíntesis y debilitando la planta. El
+                    manejo incluye la aplicación de fungicidas, la selección de
+                    variedades resistentes y prácticas culturales como la
+                    eliminación de hojas infectadas y la mejora de la
+                    circulación del aire alrededor de las plantas.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 23-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal23"
+      tabindex="-1"
+      aria-labelledby="plagasModal23"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Fresa
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Fresa.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La hoja de fresa es crucial para la fotosíntesis y el
+                    crecimiento de la planta. De forma trifoliada y color verde
+                    brillante, estas hojas son susceptibles a enfermedades como
+                    el oídio y la mancha foliar. Mantener la salud de las hojas
+                    implica monitoreo regular, aplicación de tratamientos
+                    preventivos y control de plagas. Hojas sanas aseguran una
+                    producción abundante y de alta calidad de fresas.
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 24-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal24"
+      tabindex="-1"
+      aria-labelledby="plagasModal24"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Quemadura de Fresa
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Quemadura de Fresa.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La quemadura de la fresa, causada por el sol y altas
+                    temperaturas, provoca hojas con bordes marrones y secos.
+                    Para manejarla, es crucial proporcionar sombra, riego
+                    regular y mantener un buen estado del suelo, asegurando así
+                    una producción óptima de fresas.
+
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 25-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal25"
+      tabindex="-1"
+      aria-labelledby="plagasModal25"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Mancha bacteriana del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Mancha bacteriana del Tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La mancha bacteriana del tomate, causada por Xanthomonas
+                    campestris pv. vesicatoria, provoca manchas oscuras en
+                    hojas, tallos y frutos. Para manejarla, se utilizan
+                    bactericidas, variedades resistentes y prácticas culturales
+                    como la rotación de cultivos y eliminación de plantas
+                    infectadas. Esto asegura una producción saludable de
+                    tomates.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 26-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal26"
+      tabindex="-1"
+      aria-labelledby="plagasModal26"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Tizon temprano del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Tizon temprano del Tomate.jpeg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El tizón temprano del tomate, causado por Alternaria solani,
+                    se manifiesta con manchas marrones y anillos concéntricos en
+                    hojas y tallos. Su manejo incluye el uso de fungicidas,
+                    rotación de cultivos y eliminación de restos vegetales
+                    infectados para mantener una producción saludable de
+                    tomates.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 27-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal27"
+      tabindex="-1"
+      aria-labelledby="plagasModal27"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    Las hojas del tomate (Solanum lycopersicum) son compuestas y
+                    esenciales para la fotosíntesis, transpiración y
+                    respiración. Estas funciones permiten la conversión de luz
+                    solar en energía, regulación de temperatura y absorción de
+                    nutrientes, siendo cruciales para la salud y productividad
+                    de la planta.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 28-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal28"
+      tabindex="-1"
+      aria-labelledby="plagasModal28"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Tizon tardio del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Tizon tardio del Tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El mildiu del tomate, causado por el hongo Pseudoperonospora
+                    cubensis, afecta principalmente las hojas, creando manchas
+                    amarillas que se vuelven marrones y necrosadas. La
+                    enfermedad prospera en condiciones húmedas y frescas,
+                    reduciendo significativamente la productividad. Su control
+                    incluye el uso de fungicidas, variedades resistentes y
+                    buenas prácticas agrícolas para minimizar la humedad en el
+                    follaje.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 29-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal29"
+      tabindex="-1"
+      aria-labelledby="plagasModal29"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Mildiu del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Mildiu del Tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El tizón tardío del tomate, causado por el hongo
+                    Phytophthora infestans, es una enfermedad devastadora que
+                    afecta hojas, tallos y frutos, provocando manchas oscuras y
+                    necrosis. Se propaga rápidamente en condiciones húmedas y
+                    frescas, comprometiendo gravemente la producción. El manejo
+                    incluye el uso de fungicidas, variedades resistentes y
+                    prácticas culturales adecuadas.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 30-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal30"
+      tabindex="-1"
+      aria-labelledby="plagasModal30"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Septoriosis del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Septoriosis del Tomate.jpeg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La Septoriosis del tomate, causada por el hongo Septoria
+                    lycopersici, provoca pequeñas manchas negras en las hojas,
+                    que se vuelven amarillas y caen prematuramente. Esta
+                    enfermedad prospera en condiciones cálidas y húmedas,
+                    reduciendo la fotosíntesis y afectando la producción. El
+                    manejo incluye fungicidas, rotación de cultivos y eliminar
+                    restos vegetales infectados.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 31-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal31"
+      tabindex="-1"
+      aria-labelledby="plagasModal31"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Araña roja del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Araña roja del Tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La araña roja del tomate (Tetranychus urticae) es una plaga
+                    que succiona la savia de las hojas, causando manchas
+                    amarillas, desecación y defoliación. Prolifera en
+                    condiciones cálidas y secas, reduciendo la fotosíntesis y la
+                    productividad. El control incluye acaricidas, control
+                    biológico y mantener la humedad adecuada en el cultivo.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 32-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal32"
+      tabindex="-1"
+      aria-labelledby="plagasModal32"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Mancha de diana del Tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Mancha de diana del Tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    La mancha de diana del tomate, causada por el hongo
+                    Corynespora cassiicola, produce lesiones circulares con un
+                    centro oscuro en las hojas, tallos y frutos. Esta enfermedad
+                    se desarrolla en condiciones cálidas y húmedas, reduciendo
+                    la calidad y cantidad de la cosecha. El control incluye
+                    fungicidas, rotación de cultivos y eliminar restos de
+                    plantas infectadas.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 33-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal33"
+      tabindex="-1"
+      aria-labelledby="plagasModal33"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Virus del mosaico del tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Virus del mosaico del tomate.jpg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El virus del mosaico del tomate (ToMV) causa mosaicos y
+                    moteados en las hojas, deformaciones y reducción del
+                    crecimiento. Se transmite por contacto y herramientas
+                    contaminadas, afectando la calidad y cantidad de la
+                    producción. El manejo incluye el uso de variedades
+                    resistentes, desinfección de herramientas y prácticas de
+                    higiene en el cultivo.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- plagas Modal 34-->
+    <div
+      class="plagas-modal modal fade"
+      id="plagasModal34"
+      tabindex="-1"
+      aria-labelledby="plagasModal34"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-6">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- plagas Modal - Title-->
+                  <h2
+                    class="plagas-modal-title text-secondary text-uppercase mb-0"
+                  >
+                    Virus del rizado amarillo del tomate
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- plagas Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-7"
+                    src="../../../assets/img/plagas/Virus del rizado amarillo del tomate.jpeg"
+                    alt="..."
+                  />
+                  <!-- plagas Modal - Text-->
+                  <p class="mb-4">
+                    El virus del rizado amarillo del tomate (TYLCV) provoca el
+                    enrollamiento y amarillamiento de las hojas, así como el
+                    retraso del crecimiento y la disminución del rendimiento. Se
+                    transmite principalmente por la mosca blanca. Su control
+                    incluye el uso de variedades resistentes, manejo de la mosca
+                    blanca y prácticas de higiene en el cultivo.
+                    <br />
+                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                      <i class="fas fa-xmark fa-fw"></i>
+
+                      Close Window
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../../../assets/js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

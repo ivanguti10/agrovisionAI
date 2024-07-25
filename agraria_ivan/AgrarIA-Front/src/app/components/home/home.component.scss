@@ -102,6 +102,13 @@
   object-fit: cover;
 }
 
+.btn-lg-custom {
+  font-size: 2rem !important; /* Aumenta el tamaño de la fuente */
+  padding: 1 1.9rem !important; /* Aumenta el padding para hacerlo más grande */
+  border-radius: 0.7rem !important; /* Ajusta el radio del borde para que se vea bien */
+}
+
+
 .plagas-item-title {
   text-align: center;
   font-size: 1.25rem;
@@ -191,8 +198,41 @@ h3, .h3 {
 @media (min-width: 1200px) {
   h3, .h3 {
     font-size: 1.75rem;
+    color: #374F1D;
   }
 }
+
+.confidence {
+  font-size: 1.2em; /* Aumenta ligeramente el tamaño de la fuente para destacar */
+  color: #374F1D; /* Verde, un color que generalmente indica confianza y positividad */
+  font-weight: bold; /* Hace que el texto sea más prominente */
+  margin-top: 1em; /* Añade espacio encima del párrafo para separarlo de otros elementos */
+  margin-bottom: 1em; /* Añade espacio debajo del párrafo para separación adicional */
+  background-color: #eaf4ea; /* Fondo suave para hacer que el texto resalte */
+  padding: 0.5em; /* Añade espacio dentro del elemento para mejorar la legibilidad */
+  border-radius: 5px; /* Bordes ligeramente redondeados para suavizar el aspecto */
+  display: inline-block; /* Ajusta el elemento al contenido */
+}
+
+.modal-img {
+  width: 30%; /* Ancho al 100% del contenedor */
+  max-width: 500px; /* Máximo ancho */
+  height: auto; /* Altura ajustada proporcionalmente */
+}
+
+
+.prediction-result {
+  color: #374F1D; /* Cambia esto al color que prefieras */
+  font-weight: bold; /* Opcional: para hacer el texto en negrita */
+  font-size: 1.2em; /* Opcional: para ajustar el tamaño del texto */
+}
+
+.prediction-description {
+  color: #374F1D; /* Cambia este valor al color que prefieras */
+  font-size: 1.1em; /* Opcional: ajusta el tamaño de la fuente */
+  line-height: 1.5; /* Opcional: mejora la legibilidad del texto */
+}
+
 
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);

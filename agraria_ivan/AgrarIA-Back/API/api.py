@@ -134,5 +134,7 @@ def yuca_route_cargarPlanta():
 def yuca_route_clasificarPlanta():
     return yca.clasificarPlanta()
 
+
+
 if __name__ == "__main__":
     app.run(debug=True)

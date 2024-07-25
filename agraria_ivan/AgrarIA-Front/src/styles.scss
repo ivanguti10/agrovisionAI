@@ -44,3 +44,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: white;
 }
 
+.spaced-paragraph {
+  margin-bottom: 1.5em;
+  line-height: 1.6; /* Aumenta el espacio entre líneas para mejor legibilidad */
+  font-size: 1.1em; /* Ajusta el tamaño de la fuente para hacerla un poco más grande */
+  color: #333; /* Color de texto más suave */
+}
+
+.spaced-list {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em; /* Indenta las listas para separarlas del resto del texto */
+  list-style-type: disc; /* Cambia el estilo de la viñeta */
+}
+
+.spaced-list li {
+  margin-bottom: 0.75em; /* Espacio entre los elementos de la lista */
+}
+
+.spaced-heading {
+  font-weight: bold; /* Hace que los encabezados sean más destacados */
+  margin-bottom: 1em; /* Añade espacio debajo de los encabezados */
+  color: #007bff; /* Color de los encabezados */
+}
+
+.container2 {
+  max-width: 800px; /* Limita el ancho máximo del contenido */
+  margin: 0 auto; /* Centra el contenido */
+  padding: 1em; /* Añade padding alrededor del contenido */
+  background-color: #f9f9f9; /* Fondo claro para el contenedor */
+  border-radius: 10px; /* Bordes redondeados para el contenedor */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
