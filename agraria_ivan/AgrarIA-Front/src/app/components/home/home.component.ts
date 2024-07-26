@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { DiseaseInfo } from './model/disease-info.model';  // Importa la interfaz
 import { DISEASES_INFO } from './model/diseases';  // Importa el objeto con los datos de las enfermedades
+import { EmailService } from '../services/email.service';
+
 
 // Agrega esta declaración en un archivo de declaraciones globales o al principio de tu archivo TypeScript
 declare var bootstrap: any;
@@ -17,7 +19,12 @@ export class HomeComponent {
   predictionResult: DiseaseInfo | null = null;  // Cambiado a DiseaseInfo
   selectedFile: File | null = null;
 
-  constructor(private http: HttpClient) { }
+  name: string = '';
+  email: string = '';
+  phone: string = '';
+  message: string = '';
+
+  constructor(private http: HttpClient, private emailService: EmailService) { }
 
   onFileSelected(event: Event): void {
     const file = (event.target as HTMLInputElement).files?.[0];
@@ -75,7 +82,29 @@ export class HomeComponent {
   refreshPage(): void {
     window.location.reload();
   }
+  onSubmit() {
+    const formData = {
+      name: this.name,
+      email: this.email,
+      phone: this.phone,
+      message: this.message
+    };
 
+    this.emailService.sendEmail(formData).subscribe(
+      response => {
+        console.log('Correo enviado exitosamente', response);
+        // Aquí puedes mostrar el mensaje de éxito
+        document.getElementById('submitSuccessMessage')?.classList.remove('d-none');
+        document.getElementById('submitErrorMessage')?.classList.add('d-none');
+      },
+      error => {
+        console.error('Error al enviar el correo', error);
+        // Aquí puedes mostrar el mensaje de error
+        document.getElementById('submitErrorMessage')?.classList.remove('d-none');
+        document.getElementById('submitSuccessMessage')?.classList.add('d-none');
+      }
+    );
+  }
+}
   
 
-}

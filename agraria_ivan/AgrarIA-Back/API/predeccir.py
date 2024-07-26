@@ -1,5 +1,8 @@
 import base64
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 import io
+import smtplib
 import tempfile
 from PIL import Image  # type: ignore # Asegúrate de usar PIL para la manipulación de imágenes
 from flask import Flask, request, jsonify # type: ignore
@@ -107,6 +110,45 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/send-email', methods=['POST'])
+def send_email():
+    try:
+        data = request.get_json()
+        print(f"Datos recibidos: {data}")
+        
+        user_name = data.get('name')
+        user_email = data.get('email')
+        user_phone = data.get('phone')
+        user_message = data.get('message')
 
+        recipient_email = "tfgivan34@gmail.com"
+        subject = "Nuevo mensaje de contacto"
+        body = f"Nombre: {user_name}\nEmail: {user_email}\nTeléfono: {user_phone}\n\nMensaje:\n{user_message}"
+
+        msg = MIMEMultipart()
+        msg['From'] = user_email
+        msg['To'] = recipient_email
+        msg['Subject'] = subject
+        # Usar utf-8 para el contenido del mensaje
+        msg.attach(MIMEText(body, 'plain', 'utf-8'))
+
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login('tfgivan34@gmail.com', 'x h h i r c o s q z o f d a l n')
+            server.sendmail(user_email, recipient_email, msg.as_string())
+            server.quit()
+        except smtplib.SMTPException as smtp_err:
+            print(f"Error SMTP: {smtp_err}")
+            return jsonify({"error": f"Error SMTP: {smtp_err}"}), 500
+        except Exception as e:
+            print(f"Error al enviar el correo: {e}")
+            return jsonify({"error": f"Error al enviar el correo: {e}"}), 500
+
+        return jsonify({"message": "Correo enviado exitosamente"}), 200
+
+    except Exception as e:
+        print(f"Error en la solicitud: {e}")
+        return jsonify({"error": f"Error en la solicitud: {e}"}), 500
 if __name__ == '__main__':
     app.run(debug=True)

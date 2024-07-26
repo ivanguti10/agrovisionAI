@@ -34,6 +34,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ReactiveFormsModule } from '@angular/forms';  // Asegúrate de importar esto
+import { FormsModule } from '@angular/forms';  // Importar FormsModule
+
 
 
 
@@ -96,7 +98,9 @@ import { ConteoComponent } from './components/conteo/conteo/conteo.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    ReactiveFormsModule  // Asegúrate de incluir esto en los imports
+    ReactiveFormsModule,  // Asegúrate de incluir esto en los imports
+    FormsModule  // Añadir FormsModule a los imports
+
 
   ],
 
