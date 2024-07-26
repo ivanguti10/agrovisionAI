@@ -1,27 +1,27 @@
 import base64
 import io
 import tempfile
-from PIL import Image  # Asegúrate de usar PIL para la manipulación de imágenes
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from PIL import Image  # type: ignore # Asegúrate de usar PIL para la manipulación de imágenes
+from flask import Flask, request, jsonify # type: ignore
+from flask_cors import CORS # type: ignore
 
-from psutil import virtual_memory
+from psutil import virtual_memory # type: ignore
 from pathlib import Path
 import os
-import matplotlib.pyplot as plt
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.applications import ResNet50
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, GlobalAveragePooling2D
-from tensorflow.keras.optimizers import Adam
+import matplotlib.pyplot as plt # type: ignore
+import numpy as np # type: ignore
+import tensorflow as tf # type: ignore
+from tensorflow.keras.preprocessing.image import ImageDataGenerator # type: ignore
+from tensorflow.keras.applications import ResNet50 # type: ignore
+from tensorflow.keras.models import Sequential # type: ignore
+from tensorflow.keras.layers import Dense, Dropout, GlobalAveragePooling2D # type: ignore
+from tensorflow.keras.optimizers import Adam # type: ignore
 import datetime
-from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
-import cv2
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard # type: ignore
+import cv2 # type: ignore
 import json
-from tensorflow.keras.regularizers import l2
-from tensorflow.keras.applications.resnet50 import preprocess_input
+from tensorflow.keras.regularizers import l2 # type: ignore
+from tensorflow.keras.applications.resnet50 import preprocess_input # type: ignore
 
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para todas las rutas
@@ -66,7 +66,7 @@ print(classes_train)  # Muestra los nombres de todas las clases
 
 
 
-import tensorflow as tf
+import tensorflow as tf # type: ignore
 print(tf.__version__)
 
 @app.route('/predict', methods=['POST'])

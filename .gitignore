@@ -3,6 +3,4 @@ agraria_ivan/AgrarIA-Front/.angular/
 agraria_ivan/AgrarIA-Back/EntornoVirtual/
 agraria_ivan/AgrarIA-Back/myenv310/
 node_modules
-agraria_ivan/AgrarIA-Back/myenv310/Lib/site-packages/clang/native/libclang.dll
-agraria_ivan/AgrarIA-Back/myenv310/Lib/site-packages/cv2/cv2.pyd
-agraria_ivan/AgrarIA-Back/myenv310/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.*
+
