@@ -1,4 +1,4 @@
-Google Colab:
+Google Colab: https://drive.google.com/file/d/1oX43qE62W9Q_slA04hm_9Fo-_FpNYP4v/view?usp=sharing
 
 1- Meter en la carpeta de Google Drive que aparece en el NoteBook el datasheet de NewPlantVillage: https://drive.google.com/drive/folders/1hOImmBNjVnLyFUuxx65dqeo6ygJYnTjJ?usp=sharing
 
