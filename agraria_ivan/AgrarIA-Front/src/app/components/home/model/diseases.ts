@@ -2,7 +2,7 @@ import { DiseaseInfo } from '../model/disease-info.model';
 
 export const DISEASES_INFO: { [key: string]: DiseaseInfo } = {
     'Apple scab': {
-      title: 'Manzano Sarna del manzano',
+      title: 'Sarna del manzano',
       imageUrl: '../../../assets/img/plagas/apple scab.jpg',
       description: `<div class="container2">
       <h3 class="spaced-heading">Estimado agricultor,</h3>
@@ -19,7 +19,7 @@ export const DISEASES_INFO: { [key: string]: DiseaseInfo } = {
       confidence: '' 
 },
 'Apple Black Rot': {
-    title: 'Manzano Pudrición negra',
+    title: ' Pudrición negra del Manzano',
     imageUrl: '../../../assets/img/plagas/apple black rot.jpg',
     description: `<div class="container2">
       <h3 class="spaced-heading">Estimado agricultor,</h3>

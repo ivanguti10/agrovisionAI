@@ -36,19 +36,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ReactiveFormsModule } from '@angular/forms';  // Asegúrate de importar esto
 import { FormsModule } from '@angular/forms';  // Importar FormsModule
 
-
-
-
-import { DialogImageComponent } from './components/shared/dialog-image/dialog-image.component';
-import { DialogContentComponent } from './components/shared/dialog-content/dialog-content.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { YucaComponent } from './components/modelos/yuca/yuca.component';
-import { YucaEjemplosComponent } from './components/modelos/yuca_ejemplos/yuca_ejemplos.component';
-import { YucaModeloComponent } from './components/modelos/yuca-modelo/yuca-modelo.component';
-import { YucaDuplicadosComponent } from './components/modelos/yuca-duplicados/yuca-duplicados.component';
-import { YucaClasificarComponent } from './components/modelos/yuca-clasificar/yuca-clasificar.component';
-import { ConteoComponent } from './components/conteo/conteo/conteo.component';
 
 
 
@@ -56,17 +44,7 @@ import { ConteoComponent } from './components/conteo/conteo/conteo.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    DialogContentComponent,
-    DialogImageComponent,
-    YucaComponent,
-    DialogImageComponent,
-    YucaEjemplosComponent,
-    YucaModeloComponent,
-    YucaDuplicadosComponent,
-    YucaClasificarComponent,
-    ConteoComponent,
-    ],
+    HomeComponent,    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
