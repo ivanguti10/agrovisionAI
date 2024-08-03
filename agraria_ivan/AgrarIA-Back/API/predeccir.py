@@ -26,8 +26,50 @@ import json
 from tensorflow.keras.regularizers import l2 # type: ignore
 from tensorflow.keras.applications.resnet50 import preprocess_input # type: ignore
 
+import urllib.parse
+
+
 app = Flask(__name__)
 CORS(app)  # Habilita CORS para todas las rutas
+
+plagas = [
+    {"id": 1, "title": "Sarna del Manzano", "imgSrc": "../../../assets/img/plagas/apple scab.jpg", "altText": "Apple Scab", "category": "Manzano"},
+    {"id": 2, "title": "Pudrición negra del Manzano", "imgSrc": "../../../assets/img/plagas/apple black rot.jpg", "altText": "Apple Black rot", "category": "Manzano"},
+    {"id": 3, "title": "Roya del cedro y del manzano", "imgSrc": "../../../assets/img/plagas/roya cedro.jpg", "altText": "Roya", "category": "Manzano"},
+    {"id": 4, "title": "Manzano sano", "imgSrc": "../../../assets/img/plagas/manzano sana.jpg", "altText": "manzano sano", "category": "Manzano"},
+    {"id": 5, "title": "Arandano", "imgSrc": "../../../assets/img/plagas/Arandano.png", "altText": "Arandano", "category": "Arandano"},
+    {"id": 6, "title": "Cereza", "imgSrc": "../../../assets/img/plagas/cereza.jpg", "altText": "cereza", "category": "Cereza"},
+    {"id": 7, "title": "Oidio Cerezo", "imgSrc": "../../../assets/img/plagas/oidio cerezo.jpg", "altText": "oidio cerezo", "category": "Cereza"},
+    {"id": 8, "title": "Prodedumbre negra de la Uva", "imgSrc": "../../../assets/img/plagas/Prodedumbre negra de la Uva.jpg", "altText": "Prodedumbre negra de la Uva", "category": "Uva"},
+    {"id": 9, "title": "Madera de la Vid", "imgSrc": "../../../assets/img/plagas/Madera de la vid.jpg", "altText": "Madera de la Vid", "category": "Uva"},
+    {"id": 10, "title": "Hoja de Vid sana", "imgSrc": "../../../assets/img/plagas/Hoja de Vid sana.jpg", "altText": "Hoja de Vid sana", "category": "Uva"},
+    {"id": 11, "title": "Tizon de la Vid", "imgSrc": "../../../assets/img/plagas/Tizon de la Vid.png", "altText": "Tizon de la Vid", "category": "Uva"},
+    {"id": 12, "title": "Enfermedad del Dragon Amarillo", "imgSrc": "../../../assets/img/plagas/Enfermedad del Dragon Amarillo.jpg", "altText": "Enfermedad del Dragon Amarillo", "category": "Cítricos"},
+    {"id": 13, "title": "Mancha bacteriana del Melocoton", "imgSrc": "../../../assets/img/plagas/Mancha bacteriana del Melocoton.jpg", "altText": "Mancha bacteriana del Melocoton", "category": "Melocotón"},
+    {"id": 14, "title": "Melocoton", "imgSrc": "../../../assets/img/plagas/Melocoton.jpeg", "altText": "Melocoton", "category": "Melocotón"},
+    {"id": 15, "title": "Mancha bacteriana Pimiento", "imgSrc": "../../../assets/img/plagas/Mancha bacteriana Pimiento.jpg", "altText": "Mancha bacteriana Pimiento", "category": "Pimiento"},
+    {"id": 16, "title": "Pimiento", "imgSrc": "../../../assets/img/plagas/Pimiento sano.jpg", "altText": "Pimiento", "category": "Pimiento"},
+    {"id": 17, "title": "Tizon temprano de la Patata", "imgSrc": "../../../assets/img/plagas/Tizon temprano de la Patata.png", "altText": "Tizon temprano de la Patata", "category": "Patata"},
+    {"id": 18, "title": "Patata", "imgSrc": "../../../assets/img/plagas/Patata.jpg", "altText": "Patata", "category": "Patata"},
+    {"id": 19, "title": "Tizon tardio de Patata", "imgSrc": "../../../assets/img/plagas/Tizon tardio de Patata.jpeg", "altText": "Tizon tardio de Patata", "category": "Patata"},
+    {"id": 20, "title": "Frambuesa", "imgSrc": "../../../assets/img/plagas/Frambuesa.jpg", "altText": "Frambuesa", "category": "Frambuesa"},
+    {"id": 21, "title": "Frijol", "imgSrc": "../../../assets/img/plagas/Frijol.jpeg", "altText": "Frijol", "category": "Frijol"},
+    {"id": 22, "title": "Oidio de Calabaza", "imgSrc": "../../../assets/img/plagas/Oidio de Calabaza.jpg", "altText": "Oidio de Calabaza", "category": "Calabaza"},
+    {"id": 23, "title": "Fresa", "imgSrc": "../../../assets/img/plagas/Fresa.jpg", "altText": "Fresa", "category": "Fresa"},
+    {"id": 24, "title": "Quemadura de Fresa", "imgSrc": "../../../assets/img/plagas/Quemadura de Fresa.jpg", "altText": "Quemadura de Fresa", "category": "Fresa"},
+    {"id": 25, "title": "Mancha bacteriana del Tomate", "imgSrc": "../../../assets/img/plagas/Mancha bacteriana del Tomate.jpg", "altText": "Mancha bacteriana del Tomate", "category": "Tomate"},
+    {"id": 26, "title": "Tizon temprano del Tomate", "imgSrc": "../../../assets/img/plagas/Tizon temprano del Tomate.jpeg", "altText": "Tizon temprano del Tomate", "category": "Tomate"},
+    {"id": 27, "title": "Tomate", "imgSrc": "../../../assets/img/plagas/Tomate.jpg", "altText": "Tomate", "category": "Tomate"},
+    {"id": 28, "title": "Tizon tardio del Tomate", "imgSrc": "../../../assets/img/plagas/Tizon tardio del Tomate.jpg", "altText": "Tizon tardio del Tomate", "category": "Tomate"},
+    {"id": 29, "title": "Mildiu del Tomate", "imgSrc": "../../../assets/img/plagas/Mildiu del Tomate.jpg", "altText": "Mildiu del Tomate", "category": "Tomate"},
+    {"id": 30, "title": "Septoriosis del Tomate", "imgSrc": "../../../assets/img/plagas/Septoriosis del Tomate.jpeg", "altText": "Septoriosis del Tomate", "category": "Tomate"},
+    {"id": 31, "title": "Araña roja del Tomate", "imgSrc": "../../../assets/img/plagas/Araña roja del Tomate.jpg", "altText": "Araña roja del Tomate", "category": "Tomate"},
+    {"id": 32, "title": "Mancha de diana del Tomate", "imgSrc": "../../../assets/img/plagas/Mancha de diana del Tomate.jpg", "altText": "Mancha de diana del Tomate", "category": "Tomate"},
+    {"id": 33, "title": "Virus del mosaico del tomate", "imgSrc": "../../../assets/img/plagas/Virus del mosaico del tomate.jpg", "altText": "Virus del mosaico del tomate", "category": "Tomate"},
+    {"id": 34, "title": "Virus del rizado amarillo del tomate", "imgSrc": "../../../assets/img/plagas/Virus del rizado amarillo del tomate.jpeg", "altText": "Virus del rizado amarillo del tomate", "category": "Tomate"}
+]
+
+
 
 root_path = Path("C:\\Users\\ivan2\\OneDrive\\Escritorio\\newplantvillage\\newplantvillage")
 root_path_str = str(root_path)
@@ -71,6 +113,17 @@ print(classes_train)  # Muestra los nombres de todas las clases
 
 import tensorflow as tf # type: ignore
 print(tf.__version__)
+
+@app.route('/plagas', methods=['GET'])
+def get_plagas():
+    filter_category = request.args.get('filter')
+    if filter_category:
+        filtered_plagas = [plaga for plaga in plagas if plaga['category'] == filter_category]
+        return jsonify(filtered_plagas)
+    return jsonify(plagas)
+
+
+
 
 @app.route('/predict', methods=['POST'])
 def predict():

@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { DiseaseInfo } from './model/disease-info.model';  // Importa la interfaz
 import { DISEASES_INFO } from './model/diseases';  // Importa el objeto con los datos de las enfermedades
 import { EmailService } from '../services/email.service';
+import { Plaga } from './model/plaga.model'; // Importa la interfaz Plaga
 
-
-// Agrega esta declaración en un archivo de declaraciones globales o al principio de tu archivo TypeScript
 declare var bootstrap: any;
-
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+[x: string]: any;
+
   imagePreview: string | ArrayBuffer | null = null;
-  predictionResult: DiseaseInfo | null = null;  // Cambiado a DiseaseInfo
+  predictionResult: DiseaseInfo | null = null;  
   selectedFile: File | null = null;
 
   name: string = '';
@@ -24,7 +24,18 @@ export class HomeComponent {
   phone: string = '';
   message: string = '';
 
+  plagas: Plaga[] = [];
+  selectedFilter: string = 'all';
+  filteredPlagas: Plaga[] = [];
+  rows: Plaga[][] = [];  
+  categories: string[] = ['Manzano', 'Arandano', 'Cereza', 'Uva', 'Cítricos', 'Melocotón', 'Pimiento', 'Patata', 'Frambuesa', 'Frijol', 'Calabaza', 'Fresa', 'Tomate'];
+
+
   constructor(private http: HttpClient, private emailService: EmailService) { }
+
+  ngOnInit(): void {
+    this.getPlagas();
+  }
 
   onFileSelected(event: Event): void {
     const file = (event.target as HTMLInputElement).files?.[0];
@@ -38,6 +49,32 @@ export class HomeComponent {
     }
   }
 
+  getPlagas() {
+    this.http.get<Plaga[]>('http://localhost:5000/plagas')
+      .subscribe(data => {
+        this.plagas = data;
+        this.filteredPlagas = data;
+        this.groupPlagas();
+      });
+  }
+
+  applyFilter() {
+    const filter = this.selectedFilter === 'all' ? '' : encodeURIComponent(this.selectedFilter);
+    this.http.get<Plaga[]>(`http://localhost:5000/plagas?filter=${filter}`)
+      .subscribe(data => {
+        this.filteredPlagas = data;
+        this.groupPlagas();  // Agrupar las plagas después de filtrar
+      });
+  }
+
+groupPlagas(): void {
+  this.rows = [];
+  for (let i = 0; i < this.filteredPlagas.length; i += 3) {
+    this.rows.push(this.filteredPlagas.slice(i, i + 3));
+  }
+}
+
+
   predict(): void {
     if (this.selectedFile) {
       const formData = new FormData();
@@ -45,15 +82,11 @@ export class HomeComponent {
   
       this.http.post<any>('http://localhost:5000/predict', formData).subscribe(
         response => {
-          // Obtenemos la clase predicha y la confianza desde la respuesta
           const predictedClass = response.class;
           const confidence = response.confidence;
-  
-          // Buscamos la información de la enfermedad en DISEASES_INFO
           this.predictionResult = DISEASES_INFO[predictedClass] || null;
   
           if (this.predictionResult) {
-            // Añadimos la confianza a los resultados para mostrar en el modal
             this.predictionResult.confidence = confidence;
             this.showPredictionModal();
           } else {
@@ -69,7 +102,6 @@ export class HomeComponent {
       alert('No hay imagen seleccionada.');
     }
   }
-  
 
   private showPredictionModal(): void {
     const modalElement = document.getElementById('predictionModal');
@@ -82,6 +114,7 @@ export class HomeComponent {
   refreshPage(): void {
     window.location.reload();
   }
+  
   onSubmit() {
     const formData = {
       name: this.name,
@@ -93,18 +126,14 @@ export class HomeComponent {
     this.emailService.sendEmail(formData).subscribe(
       response => {
         console.log('Correo enviado exitosamente', response);
-        // Aquí puedes mostrar el mensaje de éxito
         document.getElementById('submitSuccessMessage')?.classList.remove('d-none');
         document.getElementById('submitErrorMessage')?.classList.add('d-none');
       },
       error => {
         console.error('Error al enviar el correo', error);
-        // Aquí puedes mostrar el mensaje de error
         document.getElementById('submitErrorMessage')?.classList.remove('d-none');
         document.getElementById('submitSuccessMessage')?.classList.add('d-none');
       }
     );
   }
 }
-  
-
