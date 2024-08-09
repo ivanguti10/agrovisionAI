@@ -5,7 +5,7 @@ import io
 import smtplib
 import tempfile
 from PIL import Image  # type: ignore # Asegúrate de usar PIL para la manipulación de imágenes
-from flask import Flask, request, jsonify # type: ignore
+from flask import Flask, request, jsonify, send_from_directory # type: ignore
 from flask_cors import CORS # type: ignore
 
 from psutil import virtual_memory # type: ignore
@@ -29,8 +29,16 @@ from tensorflow.keras.applications.resnet50 import preprocess_input # type: igno
 import urllib.parse
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../../AgrarIA-Front/dist/agrar-ia')
 CORS(app)  # Habilita CORS para todas las rutas
+
+@app.route('/')
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def static_proxy(path):
+    return send_from_directory(app.static_folder, path)
 
 plagas = [
     {"id": 1, "title": "Sarna del Manzano", "imgSrc": "../../../assets/img/plagas/apple scab.jpg", "altText": "Apple Scab", "category": "Manzano"},
@@ -204,4 +212,4 @@ def send_email():
         print(f"Error en la solicitud: {e}")
         return jsonify({"error": f"Error en la solicitud: {e}"}), 500
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
