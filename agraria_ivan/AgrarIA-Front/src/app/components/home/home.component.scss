@@ -81,6 +81,97 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+#contacto {
+  background-color: #fff3cd !important;
+}
+
+.footer-bg-white {
+  background-color: white !important;
+}
+
+/* Container */
+.explicable-section {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+//* Container */
+.explicable-section {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.explicable-section h3 {
+  color: #007bff; /* Blue color for the heading */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.explicable-section p {
+  font-size: 1rem;
+  margin-bottom: 20px; /* Increased space between paragraphs */
+}
+
+/* Centered List */
+.centered-list {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left; /* Align text to left for better readability */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto 20px auto; /* Center the list and add space below */
+}
+
+.centered-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.centered-list li:before {
+  content: "•";
+  color: #556b2f; /* Green color for the bullet points */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Highlighted text */
+.explicable-section .highlight {
+  color: #556b2f; /* Green color for the highlighted text */
+  font-weight: bold;
+}
+
+.custom-btn {
+  font-size: 14px !important; /* Ajusta el tamaño del texto */
+  padding: 8px 16px !important; /* Ajusta el relleno interno del botón */
+  background-color: #374F1D !important; /* Color de fondo personalizado */
+  color: white !important; /* Color del texto */
+  border: none !important; /* Elimina el borde */
+  border-radius: 5px !important; /* Esquinas redondeadas */
+  text-decoration: none !important; /* Elimina el subrayado del enlace */
+  display: inline-block !important; /* Mantiene el estilo de botón */
+  transition: background-color 0.3s ease !important; /* Añade una transición suave para el cambio de color */
+}
+
+.custom-btn:hover {
+  background-color: #374F1D !important; /* Color de fondo al pasar el cursor */
+}
+
+
+
+
+
+
 .plagas-item-title {
   text-align: center;
   font-size: 1.25rem;
@@ -130,6 +221,57 @@
   border-radius: 0.7rem !important; /* Ajusta el radio del borde para que se vea bien */
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.btn-sm i {
+  margin-right: 4px;
+}.footer {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.footer h4 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.footer p.lead {
+  color: #4e4e4e;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #4e4e4e;
+  border-color: #4e4e4e;
+}
+
+.social-icons a:hover {
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.bg-white {
+  background-color: #ffffff; /* Color blanco */
+}
+
+
 
 .plagas-item-title {
   text-align: center;
@@ -176,6 +318,14 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.highlight {
+  font-size: 16px !important; /* Tamaño del texto */
+  color: #374F1D !important; /* Color del texto en verde */
+  font-weight: bold !important; /* Texto en negrita */
+  margin-bottom: 10px !important; /* Espacio debajo del texto */
+}
+
 
 hr {
   margin: 1rem 0;

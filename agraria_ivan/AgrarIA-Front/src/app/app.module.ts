@@ -33,13 +33,15 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { ReactiveFormsModule } from '@angular/forms';  // Asegúrate de importar esto
-import { FormsModule } from '@angular/forms';  // Importar FormsModule
+import { ReactiveFormsModule } from '@angular/forms';  
+import { FormsModule } from '@angular/forms';  
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient  } from '@angular/common/http';
 
-import { HttpClientModule } from '@angular/common/http';
-
-
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -77,8 +79,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatTooltipModule,
     ReactiveFormsModule,  // Asegúrate de incluir esto en los imports
-    FormsModule  // Añadir FormsModule a los imports
-
+    FormsModule,  // Añadir FormsModule a los imports
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
 
   ],
 

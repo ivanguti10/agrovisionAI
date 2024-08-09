@@ -4,6 +4,10 @@ import { DiseaseInfo } from './model/disease-info.model';  // Importa la interfa
 import { DISEASES_INFO } from './model/diseases';  // Importa el objeto con los datos de las enfermedades
 import { EmailService } from '../services/email.service';
 import { Plaga } from './model/plaga.model'; // Importa la interfaz Plaga
+import { TranslateService } from '@ngx-translate/core';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+
+
 
 declare var bootstrap: any;
 
@@ -19,6 +23,9 @@ export class HomeComponent implements OnInit {
   predictionResult: DiseaseInfo | null = null;  
   selectedFile: File | null = null;
 
+  originalImageUrl: SafeUrl | null = null;
+  gradCamImageUrl: SafeUrl | null = null;
+
   name: string = '';
   email: string = '';
   phone: string = '';
@@ -31,10 +38,32 @@ export class HomeComponent implements OnInit {
   categories: string[] = ['Manzano', 'Arandano', 'Cereza', 'Uva', 'Cítricos', 'Melocotón', 'Pimiento', 'Patata', 'Frambuesa', 'Frijol', 'Calabaza', 'Fresa', 'Tomate'];
 
 
-  constructor(private http: HttpClient, private emailService: EmailService) { }
+  constructor(private http: HttpClient, private emailService: EmailService,private translate: TranslateService, private sanitizer: DomSanitizer) { 
+
+
+    translate.setDefaultLang('es');
+
+        // Usar el idioma preferido (puedes guardar el idioma en localStorage o cookies para persistencia)
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang?.match(/en|es/) ? browserLang : 'es');
+  }
+
+
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 
   ngOnInit(): void {
     this.getPlagas();
+  }
+
+  scrollToSection(event: Event, sectionId: string) {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   onFileSelected(event: Event): void {
@@ -46,6 +75,25 @@ export class HomeComponent implements OnInit {
         this.imagePreview = reader.result;
       };
       reader.readAsDataURL(file);
+    }
+  }
+
+  onUpload() {
+    if (this.selectedFile) {
+      const formData = new FormData();
+      formData.append('file', this.selectedFile, this.selectedFile.name);
+
+      this.http.post('http://localhost:5000/predict', formData).subscribe(
+        (response: any) => {
+          console.log('Response:', response);
+          this.gradCamImageUrl = this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + response.grad_cam_image);
+        },
+        (error: HttpErrorResponse) => {
+          console.error('Error:', error);
+        }
+      );
+    } else {
+      console.log('No file selected');
     }
   }
 
