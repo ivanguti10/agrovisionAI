@@ -6,7 +6,7 @@ import { EmailService } from '../services/email.service';
 import { Plaga } from './model/plaga.model'; // Importa la interfaz Plaga
 import { TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { environment } from './../../../enviroments/enviroment';  // Asegúrate de que la ruta es correcta y que estás importando correctamente el archivo environment.ts
+import { environment } from '../../../environments/environment';  // Asegúrate de que la ruta es correcta y que estás importando correctamente el archivo environment.ts
 
 declare var bootstrap: any;
 
