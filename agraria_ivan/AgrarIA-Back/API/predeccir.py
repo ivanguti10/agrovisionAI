@@ -148,7 +148,7 @@ def predict():
             print(final_json)
             return jsonify(final_json)
         else:
-            return jsonify({"error": "Failed to process the image"}), 500
+            return jsonify({"error": "Failed to process the image F"}), 500
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
