@@ -26,12 +26,13 @@ import tflite_runtime.interpreter as tflite
 import tflite_runtime.interpreter as tflite
 
 
-app = Flask(__name__, static_folder='../../AgrarIA-Front/dist/agrar-ia')
+app = Flask(__name__, static_folder='agraria_ivan/AgrarIA-Front/dist/agrar-ia')
 CORS(app)  # Habilita CORS para todas las rutas
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return send_from_directory(app.static_folder, 'index.html')
+
 
 
 @app.route('/<path:path>')
