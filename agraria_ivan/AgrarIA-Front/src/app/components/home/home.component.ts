@@ -6,8 +6,7 @@ import { EmailService } from '../services/email.service';
 import { Plaga } from './model/plaga.model'; // Importa la interfaz Plaga
 import { TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-
-
+import { environment } from './../../../enviroments/enviroment';  // Asegúrate de que la ruta es correcta y que estás importando correctamente el archivo environment.ts
 
 declare var bootstrap: any;
 
@@ -17,10 +16,10 @@ declare var bootstrap: any;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-[x: string]: any;
+  [x: string]: any;
 
   imagePreview: string | ArrayBuffer | null = null;
-  predictionResult: DiseaseInfo | null = null;  
+  predictionResult: DiseaseInfo | null = null;
   selectedFile: File | null = null;
 
   originalImageUrl: SafeUrl | null = null;
@@ -34,21 +33,20 @@ export class HomeComponent implements OnInit {
   plagas: Plaga[] = [];
   selectedFilter: string = 'all';
   filteredPlagas: Plaga[] = [];
-  rows: Plaga[][] = [];  
+  rows: Plaga[][] = [];
   categories: string[] = ['Manzano', 'Arandano', 'Cereza', 'Uva', 'Cítricos', 'Melocotón', 'Pimiento', 'Patata', 'Frambuesa', 'Frijol', 'Calabaza', 'Fresa', 'Tomate'];
 
-
-  constructor(private http: HttpClient, private emailService: EmailService,private translate: TranslateService, private sanitizer: DomSanitizer) { 
-
-
+  constructor(
+    private http: HttpClient,
+    private emailService: EmailService,
+    private translate: TranslateService,
+    private sanitizer: DomSanitizer
+  ) {
     translate.setDefaultLang('es');
 
-        // Usar el idioma preferido (puedes guardar el idioma en localStorage o cookies para persistencia)
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang?.match(/en|es/) ? browserLang : 'es');
   }
-
-
 
   switchLanguage(language: string) {
     this.translate.use(language);
@@ -83,7 +81,7 @@ export class HomeComponent implements OnInit {
       const formData = new FormData();
       formData.append('file', this.selectedFile, this.selectedFile.name);
 
-      this.http.post('https://agrovisionai-0a757d03ae4c.herokuapp.com/predict', formData).subscribe(
+      this.http.post(`${environment.apiUrl}/predict`, formData).subscribe(
         (response: any) => {
           console.log('Response:', response);
           this.gradCamImageUrl = this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + response.grad_cam_image);
@@ -98,42 +96,49 @@ export class HomeComponent implements OnInit {
   }
 
   getPlagas() {
-    this.http.get<Plaga[]>('https://agrovisionai-0a757d03ae4c.herokuapp.com/plagas')
-      .subscribe(data => {
+    this.http.get<Plaga[]>(`${environment.apiUrl}/plagas`).subscribe(
+      (data) => {
         this.plagas = data;
         this.filteredPlagas = data;
         this.groupPlagas();
-      });
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error:', error);
+      }
+    );
   }
 
   applyFilter() {
     const filter = this.selectedFilter === 'all' ? '' : encodeURIComponent(this.selectedFilter);
-    this.http.get<Plaga[]>(`https://agrovisionai-0a757d03ae4c.herokuapp.com/plagas?filter=${filter}`)
-      .subscribe(data => {
+    this.http.get<Plaga[]>(`${environment.apiUrl}/plagas?filter=${filter}`).subscribe(
+      (data) => {
         this.filteredPlagas = data;
         this.groupPlagas();  // Agrupar las plagas después de filtrar
-      });
+      },
+      (error: HttpErrorResponse) => {
+        console.error('Error:', error);
+      }
+    );
   }
 
-groupPlagas(): void {
-  this.rows = [];
-  for (let i = 0; i < this.filteredPlagas.length; i += 3) {
-    this.rows.push(this.filteredPlagas.slice(i, i + 3));
+  groupPlagas(): void {
+    this.rows = [];
+    for (let i = 0; i < this.filteredPlagas.length; i += 3) {
+      this.rows.push(this.filteredPlagas.slice(i, i + 3));
+    }
   }
-}
-
 
   predict(): void {
     if (this.selectedFile) {
       const formData = new FormData();
       formData.append('file', this.selectedFile, this.selectedFile.name);
-  
-      this.http.post<any>('https://agrovisionai-0a757d03ae4c.herokuapp.com/predict', formData).subscribe(
-        response => {
+
+      this.http.post<any>(`${environment.apiUrl}/predict`, formData).subscribe(
+        (response) => {
           const predictedClass = response.class;
           const confidence = response.confidence;
           this.predictionResult = DISEASES_INFO[predictedClass] || null;
-  
+
           if (this.predictionResult) {
             this.predictionResult.confidence = confidence;
             this.showPredictionModal();
@@ -162,22 +167,22 @@ groupPlagas(): void {
   refreshPage(): void {
     window.location.reload();
   }
-  
+
   onSubmit() {
     const formData = {
       name: this.name,
       email: this.email,
       phone: this.phone,
-      message: this.message
+      message: this.message,
     };
 
     this.emailService.sendEmail(formData).subscribe(
-      response => {
+      (response) => {
         console.log('Correo enviado exitosamente', response);
         document.getElementById('submitSuccessMessage')?.classList.remove('d-none');
         document.getElementById('submitErrorMessage')?.classList.add('d-none');
       },
-      error => {
+      (error) => {
         console.error('Error al enviar el correo', error);
         document.getElementById('submitErrorMessage')?.classList.remove('d-none');
         document.getElementById('submitSuccessMessage')?.classList.add('d-none');

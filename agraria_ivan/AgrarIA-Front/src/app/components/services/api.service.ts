@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from './../../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private apiUrl = 'https://agrovisionai-0a757d03ae4c.herokuapp.com/predict';  // Asegúrate de que esta URL coincida con la de tu backend
+  private apiUrl = `${environment.apiUrl}/predict`;  // Asegúrate de que esta URL coincida con la de tu backend
 
   constructor(private http: HttpClient) { }
 

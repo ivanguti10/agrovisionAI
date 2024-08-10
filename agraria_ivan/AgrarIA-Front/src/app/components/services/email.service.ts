@@ -1,13 +1,14 @@
-// email.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from './../../../enviroments/enviroment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = 'https://agrovisionai-0a757d03ae4c.herokuapp.com/send-email'; // URL de tu API backend
+  private apiUrl = `${environment.apiUrl}/send-email`; // URL de tu API backend
 
   constructor(private http: HttpClient) { }
 
