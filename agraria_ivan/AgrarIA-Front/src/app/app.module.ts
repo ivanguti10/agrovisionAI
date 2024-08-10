@@ -34,7 +34,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ReactiveFormsModule } from '@angular/forms';  
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';  
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient  } from '@angular/common/http';
