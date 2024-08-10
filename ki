@@ -1,0 +1,57 @@
+[33m51c8fadea[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31mheroku/main[m[33m)[m Add model file for deployment
+[33mc2a52b421[m Switched to TensorFlow Lite and prepared for deployment7
+[33me2152ef6a[m Switched to TensorFlow Lite and prepared for deployment6
+[33m2fee28753[m Switched to TensorFlow Lite and prepared for deployment5
+[33md8242eb3f[m Switched to TensorFlow Lite and prepared for deployment3
+[33mec00f8512[m Switched to TensorFlow Lite and prepared for deployment2
+[33m99bd182f0[m Switched to TensorFlow Lite and prepared for deployment
+[33m5836d000c[m Changed TensorFlow to TensorFlow-CPU to reduce slug size
+[33m06e753bc5[m Optimizing slug size
+[33mf8506c64d[m Remove node_modules from version control
+[33m3aea63243[m Limpieza de dependencias
+[33mbd063ba43[m Remove tensorflow-intel to fix deployment issue3
+[33m5ea6dfa92[m Remove tensorflow-intel to fix deployment issue2
+[33mf0390b9a4[m Remove tensorflow-intel to fix deployment issue
+[33m9021c19fc[m Desplegamos
+[33m6052a2377[m Move requirements.txt to the API directory
+[33m9ca8512a2[m Trigger rebuild with correct buildpack2
+[33m135be4409[m Trigger rebuild with correct buildpack
+[33md2da1ee6b[m Ensure gunicorn is installed and correct Python version
+[33me5aa0d250[m Trigger Heroku rebuild
+[33m47d6bddb2[m Desplegando + gunicorn segundo intentof
+[33m87c540879[m Desplegando + gunicorn segundo intentoe
+[33m6c9912234[m Desplegando + gunicorn segundo intentod
+[33m9b1c2aafd[m Desplegando + gunicorn segundo intentoc
+[33mff7dcb6d5[m Desplegando + gunicorn segundo intentob
+[33m1ba4e5fd9[m Desplegando + gunicorn segundo intento
+[33mec8b2ae9e[m Desplegando + gunicorn
+[33m287bc816b[m Desplegando
+[33macc07eafd[m[33m ([m[1;31morigin/main[m[33m)[m Todo hecho y desplegamos
+[33mb1ab93faf[m Todo hecho
+[33m60c9fe537[m Hasta lo de los filtros
+[33m71af8891a[m Aqui se lo mando al tutor4
+[33m6b36bfc5f[m Aqui se lo mando al tutor3
+[33mb0763e2d7[m Aqui se lo mando al tutor2
+[33m720396bb5[m Aqui se lo mando al tutor
+[33m195865250[m Funcionalidad correo hecha
+[33mbe7f79495[m Plagas y Predecir hecho
+[33mbdcefd64c[m porfin
+[33mf6585a2cc[m metiendo plagas
+[33m7fabf3037[m bootstrap
+[33m7727481ad[m Solo cosas de ivan
+[33m64bc6792e[m yuca completo
+[33m698f6e0fb[m Ejemplos Modelo y Duplicados, cargar planta
+[33mafb8a1953[m Ejemplos Modelo y Duplicados
+[33m21181323e[m pantalla de inicio yuca + ejemplos 2
+[33m406c994d5[m pantalla de inicio yuca + ejemplos
+[33m42e9d422d[m pantalla de inicio yuca + ejemplos
+[33mf17772f03[m pantalla de inicio yuca + ejemplos
+[33m5543e204f[m ruta train_images bien hecha_resuelto
+[33m4f363cfaa[m ruta train_images bien hecha
+[33m60b06cb33[m ruta train_images bien hecha
+[33me400e006d[m ruta train_images bien hecha
+[33m8fbdac0f3[m Update README.md
+[33m1d82d8e77[m Update README.md
+[33m7fe4dc116[m Update README.md
+[33m66392cbca[m all commit
+[33m5f62982b6[m first commit
