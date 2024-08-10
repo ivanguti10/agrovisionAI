@@ -23,6 +23,8 @@ import urllib.parse
 import tflite_runtime.interpreter as tflite
 
 
+import tflite_runtime.interpreter as tflite
+
 
 app = Flask(__name__, static_folder='../../AgrarIA-Front/dist/agrar-ia')
 CORS(app)  # Habilita CORS para todas las rutas
@@ -74,22 +76,21 @@ plagas = [
 
 
 
-root_path = Path("C:\\Users\\ivan2\\OneDrive\\Escritorio\\newplantvillage\\newplantvillage")
-root_path_str = str(root_path)
 classes_train = ['Apple scab', 'Apple Black Rot', 'Manzano Roya del manzano y del cedro', 'Manzano saludable', 'Arándano saludable', 'Cereza (incluyendo ácida) Oidio', 'Cereza (incluyendo ácida) saludable', 'Vid Podredumbre negra', 'Vid Esca (Sarampión negro)', 'Vid Tizón de la hoja (Mancha de la hoja de Isariopsis)', 'Vid saludable', 'Naranja Huanglongbing (Greening de los cítricos)', 'Melocotón Mancha bacteriana', 'Melocotón saludable', 'Pimiento, morrón Mancha bacteriana', 'Pimiento, morrón saludable', 'Patata Tizón temprano', 'Patata Tizón tardío', 'Patata saludable', 'Frambuesa saludable', 'Soja saludable', 'Calabaza Oidio', 'Fresa Chamusco de la hoja', 'Fresa saludable', 'Tomate Mancha bacteriana', 'Tomate Tizón temprano', 'Tomate Tizón tardío', 'Tomate Moho de la hoja', 'Tomate Mancha foliar de Septoria', 'Tomate Araña roja (Ácaro de dos manchas)', 'Tomate Mancha diana', 'Tomate Virus del rizado amarillo de la hoja del tomate', 'Tomate Virus del mosaico del tomate', 'Tomate saludable']
 
 
+model_path = 'models/converted_model.tflite'
 
-model_path = 'C:\\Users\\ivan2\\OneDrive\\Escritorio\\converted_model.tflite'
 
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"El archivo de modelo en la ruta {model_path} no existe.")
 
 try:
+   # Cargar el modelo TFLite
     interpreter = tflite.Interpreter(model_path)
     interpreter.allocate_tensors()
 
-    # Obtener detalles del tensor de entrada y salida
+        # Obtener detalles del tensor de entrada y salida
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
@@ -152,6 +153,7 @@ def predict():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route('/send-email', methods=['POST'])
 def send_email():
