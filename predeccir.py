@@ -30,8 +30,9 @@ app = Flask(__name__, static_folder='../../AgrarIA-Front/dist/agrar-ia')
 CORS(app)  # Habilita CORS para todas las rutas
 
 @app.route('/')
-def serve():
-    return send_from_directory(app.static_folder, 'index.html')
+def index():
+    return "Hello, World!"
+
 
 @app.route('/<path:path>')
 def static_proxy(path):
