@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private apiUrl = 'http://localhost:5000/predict';  // Asegúrate de que esta URL coincida con la de tu backend
+  private apiUrl = 'https://agrovisionai-0a757d03ae4c.herokuapp.com/predict';  // Asegúrate de que esta URL coincida con la de tu backend
 
   constructor(private http: HttpClient) { }
 

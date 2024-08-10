@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
-  private apiUrl = 'http://localhost:5000/send-email'; // URL de tu API backend
+  private apiUrl = 'https://agrovisionai-0a757d03ae4c.herokuapp.com/send-email'; // URL de tu API backend
 
   constructor(private http: HttpClient) { }
 

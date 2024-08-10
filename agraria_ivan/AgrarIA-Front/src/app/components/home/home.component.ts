@@ -83,7 +83,7 @@ export class HomeComponent implements OnInit {
       const formData = new FormData();
       formData.append('file', this.selectedFile, this.selectedFile.name);
 
-      this.http.post('http://localhost:5000/predict', formData).subscribe(
+      this.http.post('https://agrovisionai-0a757d03ae4c.herokuapp.com/predict', formData).subscribe(
         (response: any) => {
           console.log('Response:', response);
           this.gradCamImageUrl = this.sanitizer.bypassSecurityTrustUrl('data:image/png;base64,' + response.grad_cam_image);
@@ -98,7 +98,7 @@ export class HomeComponent implements OnInit {
   }
 
   getPlagas() {
-    this.http.get<Plaga[]>('http://localhost:5000/plagas')
+    this.http.get<Plaga[]>('https://agrovisionai-0a757d03ae4c.herokuapp.com/plagas')
       .subscribe(data => {
         this.plagas = data;
         this.filteredPlagas = data;
@@ -108,7 +108,7 @@ export class HomeComponent implements OnInit {
 
   applyFilter() {
     const filter = this.selectedFilter === 'all' ? '' : encodeURIComponent(this.selectedFilter);
-    this.http.get<Plaga[]>(`http://localhost:5000/plagas?filter=${filter}`)
+    this.http.get<Plaga[]>(`https://agrovisionai-0a757d03ae4c.herokuapp.com/plagas?filter=${filter}`)
       .subscribe(data => {
         this.filteredPlagas = data;
         this.groupPlagas();  // Agrupar las plagas después de filtrar
@@ -128,7 +128,7 @@ groupPlagas(): void {
       const formData = new FormData();
       formData.append('file', this.selectedFile, this.selectedFile.name);
   
-      this.http.post<any>('http://localhost:5000/predict', formData).subscribe(
+      this.http.post<any>('https://agrovisionai-0a757d03ae4c.herokuapp.com/predict', formData).subscribe(
         response => {
           const predictedClass = response.class;
           const confidence = response.confidence;
