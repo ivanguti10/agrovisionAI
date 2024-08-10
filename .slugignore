@@ -1,5 +1,5 @@
-agraria_ivan/AgrarIA-Front/node_modules/
-agraria_ivan/AgrarIA-Front/.angular/
-agraria_ivan/AgrarIA-Back/EntornoVirtual/
-agraria_ivan/AgrarIA-Back/myenv310/
-
+*.log
+node_modules/
+tests/
+docs/
+.env
