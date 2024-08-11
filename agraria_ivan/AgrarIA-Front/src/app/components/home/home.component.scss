@@ -1950,5 +1950,35 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
   }
 }
 
+/* Especificidad más alta usando el ID del contenedor o clases más específicas */
+#mainNav .masthead-heading {
+  color: #B0802E !important; /* Aseguramos que el color sea el correcto */
+}
+
+/* También para todas las resoluciones posibles */
+@media (max-width: 767.98px) {
+  #mainNav .masthead-heading {
+    color: #B0802E !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #mainNav .masthead-heading {
+    color: #B0802E !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #mainNav .masthead-heading {
+    color: #B0802E !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #mainNav .masthead-heading {
+    color: #B0802E !important;
+  }
+}
+
 
 }
