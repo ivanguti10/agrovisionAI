@@ -1810,3 +1810,27 @@ html {
     margin-bottom: 0;
   }
 }
+
+/* Cambiar el color de fondo del menú desplegable */
+.navbar-collapse {
+  background-color: #004d40; /* Cambia este color por el que prefieras */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* Cambia el color del texto para que contraste con el fondo */
+}
+
+/* Cambiar el color de fondo de los elementos del menú al hacer hover */
+.navbar-nav .nav-link:hover {
+  background-color: #00796b; /* Color de fondo al hacer hover */
+  color: #ffffff; /* Color del texto al hacer hover */
+}
+
+/* Opcional: Cambiar el color de fondo del icono del menú desplegable (hamburguesa) */
+.navbar-toggler {
+  background-color: #004d40; /* Cambia el color de fondo del icono */
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* Cambia el color del icono a blanco */
+}
