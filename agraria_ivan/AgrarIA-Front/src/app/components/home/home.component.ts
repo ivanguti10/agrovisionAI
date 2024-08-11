@@ -53,8 +53,6 @@ export class HomeComponent implements OnInit {
 
   switchLanguage(language: string) {
     this.translate.use(language);
-    this.closeMenu(); // Cierra el menú después de cambiar de idioma
-
   }
 
   ngOnInit(): void {
@@ -85,23 +83,24 @@ export class HomeComponent implements OnInit {
 
   }
   
-  // Método para cerrar el menú cuando se selecciona un enlace
   closeMenu() {
     const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
     const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
-
+  
     if (navbarToggler && navbarCollapse.classList.contains('show')) {
       navbarToggler.click(); // Simula un clic en el botón de menú para cerrarlo
     }
   }
+  
 
   
 
-  scrollToSection(event: Event, section: string) {
+  scrollToSection(event: Event, sectionId: string) {
     event.preventDefault();
-    this.router.navigate([], { fragment: section }).then(() => {
-      this.closeMenu(); // Cierra el menú después de navegar
-    });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   onFileSelected(event: Event): void {
