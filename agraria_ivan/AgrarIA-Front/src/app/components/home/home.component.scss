@@ -1811,26 +1811,33 @@ html {
   }
 }
 
-/* Cambiar el color de fondo del menú desplegable */
 .navbar-collapse {
-  background-color: #004d40; /* Cambia este color por el que prefieras */
+  background-color: #344e41; /* Cambia este color según tu diseño */
 }
 
 .navbar-nav .nav-link {
-  color: #ffffff; /* Cambia el color del texto para que contraste con el fondo */
+  color: #ffffff; /* Color del texto */
 }
 
-/* Cambiar el color de fondo de los elementos del menú al hacer hover */
 .navbar-nav .nav-link:hover {
-  background-color: #00796b; /* Color de fondo al hacer hover */
-  color: #ffffff; /* Color del texto al hacer hover */
+  background-color: #28382d; /* Color de fondo al pasar el cursor */
+  color: #ffffff; /* Color del texto al pasar el cursor */
 }
 
-/* Opcional: Cambiar el color de fondo del icono del menú desplegable (hamburguesa) */
+
 .navbar-toggler {
-  background-color: #004d40; /* Cambia el color de fondo del icono */
+  border-color: rgba(255, 255, 255, 0.1); /* Un borde sutil */
 }
 
 .navbar-toggler-icon {
-  filter: brightness(0) invert(1); /* Cambia el color del icono a blanco */
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
+
+.navbar-toggler {
+  color: #ffffff; /* Asegúrate de que el texto y los íconos sean visibles */
+}
+
+.bg-secondary {
+  background-color: #344e41 !important; /* Asegúrate de que coincida con el fondo que deseas */
+}
+
