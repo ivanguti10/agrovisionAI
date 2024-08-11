@@ -1698,4 +1698,22 @@ html {
   background-color: #1a252f;
 }
 
+/* Cambia el fondo del menú desplegable al color de la navbar */
+.navbar-collapse {
+  background-color: #343a40; /* Cambia este valor según el color de tu navbar */
+}
+
+.navbar-toggler {
+  background-color: #007bff; /* Cambia este valor al color que prefieras para el botón de toggle */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff; /* Color del texto en los enlaces del menú */
+}
+
+/* Opcional: Cambia el color de los enlaces cuando el usuario pase el mouse sobre ellos */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #007bff;
+}
+
 
