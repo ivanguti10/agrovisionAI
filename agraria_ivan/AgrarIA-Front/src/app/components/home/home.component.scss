@@ -1697,3 +1697,116 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col-sm-12 {
+    margin-bottom: 15px;
+  }
+
+  .some-class {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .row {
+    margin: 5px 0;
+  }
+
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+
+  .some-class {
+    font-size: 16px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding: 30px;
+  }
+
+  .row {
+    margin: 10px 0;
+  }
+
+  .col-lg-4 {
+    margin-bottom: 25px;
+  }
+
+  .some-class {
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 993px) {
+  .container {
+    padding: 40px;
+  }
+
+  .row {
+    margin: 15px 0;
+  }
+
+  .col-lg-4 {
+    margin-bottom: 30px;
+  }
+
+  .some-class {
+    font-size: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
