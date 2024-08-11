@@ -47,57 +47,44 @@
     <!-- FontAwesome for icons -->
   </head>
   <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="#page-top">Agro Vision AI</a>
-        <button
-          class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
+   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#page-top">Agro Vision AI</a>
+    <div class="navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#plagas" (click)="scrollToSection($event, 'plagas')">
+            {{ 'NAV_GLOSSARY' | translate }}
+          </a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#predecir" (click)="scrollToSection($event, 'predecir')">
+            {{ 'PREDICT_PEST' | translate }}
+          </a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#explicabilidad" (click)="scrollToSection($event, 'explicabilidad')">
+            {{ 'EXPLICA' | translate }}
+          </a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contacto" (click)="scrollToSection($event, 'contacto')">
+            {{ 'CONTACT' | translate }}
+          </a>
+        </li>
+      </ul>
+      <div class="ms-auto d-flex">
+        <button class="btn btn-primary btn-sm mx-1" (click)="switchLanguage('en')">
+          <i class="fas fa-flag-usa"></i> EN
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#plagas" (click)="scrollToSection($event, 'plagas')">
-                {{ 'NAV_GLOSSARY' | translate }}
-              </a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#predecir" (click)="scrollToSection($event, 'predecir')">
-                {{ 'PREDICT_PEST' | translate }}
-              </a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#explicabilidad" (click)="scrollToSection($event, 'explicabilidad')">
-                {{ 'EXPLICA' | translate }}
-              </a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contacto" (click)="scrollToSection($event, 'contacto')">
-                {{ 'CONTACT' | translate }}
-              </a>
-            </li>
-
-          </ul>
-          <div class="ms-auto d-flex">
-            <button class="btn btn-primary btn-sm mx-1" (click)="switchLanguage('en')">
-              <i class="fas fa-flag-usa"></i> EN
-            </button>
-            <button class="btn btn-primary btn-sm mx-1" (click)="switchLanguage('es')">
-              <i class="fas fa-flag"></i> ES
-            </button>
-          </div>
-        </div>
+        <button class="btn btn-primary btn-sm mx-1" (click)="switchLanguage('es')">
+          <i class="fas fa-flag"></i> ES
+        </button>
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
     
     
     <!-- Masthead-->
