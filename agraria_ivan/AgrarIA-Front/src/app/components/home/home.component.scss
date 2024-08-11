@@ -132,6 +132,8 @@
   /* Ajusta este valor según tus necesidades */
   margin: auto;
   /* Centra el item dentro de su columna */
+  margin-bottom: 20px;
+
 }
 
 .plagas-item img {
@@ -1759,3 +1761,39 @@ html {
   }
 }
 
+// Estilo por defecto para todas las resoluciones (se mostrará de 3 en 3 en pantallas grandes)
+.plagas-item-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plagas-item-container .plagas-item {
+  flex: 1 1 calc(33.33% - 1em); /* 3 items por fila en pantallas grandes */
+  margin: 0.5em;
+}
+
+// Media query para pantallas pequeñas
+@media (max-width: 767.98px) {
+  .plagas-item-container .plagas-item {
+    flex: 1 1 100%; /* 1 item por fila en pantallas pequeñas */
+  }
+}
+
+/* Para pantallas pequeñas y medianas (móviles y tablets) */
+@media (max-width: 991.98px) {
+  .plagas-item {
+    /* Los elementos ocupan toda la fila */
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Para pantallas grandes (escritorio) */
+@media (min-width: 992px) {
+  .plagas-item {
+    /* Tres elementos por fila */
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
