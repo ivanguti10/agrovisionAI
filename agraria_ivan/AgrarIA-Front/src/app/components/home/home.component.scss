@@ -1752,4 +1752,10 @@ html {
   color: #1abc9c;
 }
 
+@media (max-width: 767px) {
+  .plagas .col-sm-12 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
 
