@@ -80,6 +80,16 @@ export class HomeComponent implements OnInit {
 
   }
   
+// Añadir esto en tu home.component.ts
+closeMenu() {
+  const navbarCollapse = document.querySelector('#navbarResponsive') as HTMLElement;
+
+  if (navbarCollapse.classList.contains('show')) {
+    navbarCollapse.classList.remove('show'); // Remueve la clase show para colapsar
+  } else {
+    navbarCollapse.classList.add('show'); // Añade la clase show para desplegar
+  }
+}
 
   
 
