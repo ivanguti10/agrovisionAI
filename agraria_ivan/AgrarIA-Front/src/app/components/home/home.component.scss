@@ -1781,4 +1781,18 @@ html {
     max-width: 80%; /* Limita el ancho del contenedor para mejorar la legibilidad */
     margin: 0 auto; /* Centra el contenedor */
   }
+
+/* Estilos para pantallas grandes (desktops, pantallas grandes de iPad) */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    font-size: 1.25rem; /* Ajusta el tamaño de la fuente */
+    padding: 2rem; /* Aumenta el padding de la navbar */
+  }
+
+  .container2 {
+    max-width: 70%; /* Limita el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+}
+
 }
