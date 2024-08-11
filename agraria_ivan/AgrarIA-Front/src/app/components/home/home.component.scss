@@ -1833,5 +1833,23 @@ html {
     flex-direction: column !important; /* Asegura que los items se apilen verticalmente */
     align-items: center; /* Centra los ítems en la columna */
   }
+
+  /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
+h1, h2, h3, h4, h5, h6 {
+  color: #B0802E !important;
+}
+
+/* Opcional: aplicar solo a ciertos títulos específicos */
+.page-section-heading {
+  color: #B0802E !important;
+}
+
+/* Si quieres asegurarte específicamente para pantallas móviles */
+@media (max-width: 767.98px) {
+  h1, h2, h3, h4, h5, h6, .page-section-heading {
+    color: #B0802E !important; /* Aplica el color específico en móviles */
+  }
+}
+
 }
 
