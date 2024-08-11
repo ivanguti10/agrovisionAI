@@ -1872,5 +1872,46 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Estilos generales (para pantallas grandes y por defecto) */
+h1, h2, h3, h4, h5, h6, .page-section-heading {
+  color: #B0802E !important;
+}
+
+/* Pantallas pequeñas (teléfonos en modo vertical y horizontal) */
+@media (max-width: 575.98px) {
+  h1, h2, h3, h4, h5, h6, .page-section-heading {
+    color: #B0802E !important;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1, h2, h3, h4, h5, h6, .page-section-heading {
+    color: #B0802E !important;
+  }
+}
+
+/* Pantallas grandes (laptops pequeñas y tabletas en modo horizontal) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1, h2, h3, h4, h5, h6, .page-section-heading {
+    color: #B0802E !important;
+  }
+}
+
+/* Pantallas extra grandes (laptops grandes y monitores de escritorio) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  h1, h2, h3, h4, h5, h6, .page-section-heading {
+    color: #B0802E !important;
+  }
+}
+
+/* Pantallas ultra grandes (monitores de alta resolución) */
+@media (min-width: 1200px) {
+  h1, h2, h3, h4, h5, h6, .page-section-heading {
+    color: #B0802E !important;
+  }
+}
+
+
 }
 
