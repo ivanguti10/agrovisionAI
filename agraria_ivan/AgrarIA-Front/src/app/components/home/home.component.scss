@@ -1753,3 +1753,32 @@ html {
 }
 
 
+/* Estilos generales para iPads (modo vertical y horizontal) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    padding: 1rem; /* Añade algo de padding */
+  }
+
+  .navbar {
+    padding: 1.5rem; /* Aumenta el padding de la navbar */
+    font-size: 1.1rem; /* Ajusta el tamaño de la fuente de la navbar */
+  }
+
+  .container2 {
+    max-width: 100%; /* Permite que el contenedor ocupe toda la anchura disponible */
+    padding: 2rem; /* Aumenta el padding */
+  }
+}
+
+/* Estilos específicos para iPad en modo horizontal */
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .navbar {
+    padding: 1rem 3rem; /* Añade más padding horizontal */
+  }
+
+  .container2 {
+    max-width: 80%; /* Limita el ancho del contenedor para mejorar la legibilidad */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+}
