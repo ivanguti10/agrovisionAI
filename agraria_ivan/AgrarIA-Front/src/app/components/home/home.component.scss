@@ -1568,7 +1568,23 @@ html {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
+  margin-right: 15px; /* Asegura que el botón no esté demasiado a la derecha */
+  margin-left: auto; /* Centra el botón en la parte derecha */
+  display: block; /* Asegura que se muestre en pantallas pequeñas */
 }
+
+@media (min-width: 992px) {
+  #mainNav .navbar-toggler {
+    display: none; /* Oculta el botón en pantallas grandes, ya que no es necesario */
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--bs-secondary-bg-color); /* Aplica el fondo de la barra de navegación al menú desplegable */
+  }
+}
+
 
 @media (min-width: 992px) {
   #mainNav {
