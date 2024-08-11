@@ -937,7 +937,11 @@ code {
   color: var(--bs-navbar-active-color);
 }
 
-
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
 
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
@@ -976,7 +980,10 @@ code {
     padding-right: var(--bs-navbar-nav-link-padding-x);
     padding-left: var(--bs-navbar-nav-link-padding-x);
   }
-
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
   .navbar-expand-lg .navbar-toggler {
     display: none;
   }
@@ -1691,141 +1698,3 @@ html {
   background-color: #1a252f;
 }
 
-
-@media (max-width: 576px) {
-  .container {
-    padding: 10px;
-  }
-
-  .row {
-    margin: 0;
-  }
-
-  .col-sm-12 {
-    margin-bottom: 15px;
-  }
-
-  .some-class {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-  .container {
-    padding: 20px;
-  }
-
-  .row {
-    margin: 5px 0;
-  }
-
-  .col-md-6 {
-    margin-bottom: 20px;
-  }
-
-  .some-class {
-    font-size: 16px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-  .container {
-    padding: 30px;
-  }
-
-  .row {
-    margin: 10px 0;
-  }
-
-  .col-lg-4 {
-    margin-bottom: 25px;
-  }
-
-  .some-class {
-    font-size: 18px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    width: auto;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 993px) {
-  .container {
-    padding: 40px;
-  }
-
-  .row {
-    margin: 15px 0;
-  }
-
-  .col-lg-4 {
-    margin-bottom: 30px;
-  }
-
-  .some-class {
-    font-size: 20px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .btn {
-    width: auto;
-    margin-bottom: 0;
-  }
-}
-/* Color de fondo del menú desplegable en dispositivos móviles */
-.navbar-collapse.show {
-  background-color: #34523e; /* Cambia este valor al color de la navbar */
-  padding: 15px; /* Espaciado interno para el contenido del menú */
-  border-radius: 5px; /* Bordes redondeados opcionales */
-}
-
-/* Asegúrate de que el texto dentro del menú sea visible */
-.navbar-nav .nav-link {
-  color: #ffffff !important; /* Color de texto blanco */
-}
-
-.navbar-nav .nav-link:hover {
-  background-color: #28382d !important; /* Color de fondo al pasar el cursor */
-  color: #ffffff !important; /* Color de texto al pasar el cursor */
-}
-
-/* Color de fondo del botón del menú en dispositivos móviles */
-.navbar-toggler {
-  background-color: #34523e; /* Mismo color que la navbar */
-  border-color: rgba(255, 255, 255, 0.5); /* Borde con un poco de transparencia */
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
