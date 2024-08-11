@@ -1920,42 +1920,34 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
   }
 }
 
-/* Estilos generales para `.navbar-brand` en todas las pantallas */
-.navbar-brand {
-  color: #B0802E !important; /* Color específico para el título en el navbar */
+/* Aplicar el color específico a .masthead-heading */
+.masthead-heading {
+  color: #B0802E !important; /* Forzar el color deseado */
 }
 
-/* Específico para pantallas pequeñas (hasta 767.98px) */
+/* Asegurar el color para pantallas específicas */
 @media (max-width: 767.98px) {
-  .navbar-brand {
+  .masthead-heading {
     color: #B0802E !important;
   }
 }
 
-/* Específico para tabletas pequeñas (768px a 991.98px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .navbar-brand {
+  .masthead-heading {
     color: #B0802E !important;
   }
 }
 
-/* Específico para tabletas grandes y laptops pequeñas (992px a 1199.98px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .navbar-brand {
+  .masthead-heading {
     color: #B0802E !important;
   }
 }
 
-/* Específico para pantallas grandes (1200px en adelante) */
 @media (min-width: 1200px) {
-  .navbar-brand {
+  .masthead-heading {
     color: #B0802E !important;
   }
-
-}
-
-#mainNav .navbar-brand {
-  color: #B0802E !important;
 }
 
 

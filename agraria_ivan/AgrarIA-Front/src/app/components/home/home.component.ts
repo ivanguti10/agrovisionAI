@@ -80,17 +80,15 @@ export class HomeComponent implements OnInit {
 
   }
   
-// Añadir esto en tu home.component.ts
-closeMenu() {
-  const navbarCollapse = document.querySelector('#navbarResponsive') as HTMLElement;
-
-  if (navbarCollapse.classList.contains('show')) {
-    navbarCollapse.classList.remove('show'); // Remueve la clase show para colapsar
-  } else {
-    navbarCollapse.classList.add('show'); // Añade la clase show para desplegar
+  closeMenu() {
+    const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+    const navbarCollapse = document.querySelector('#navbarResponsive') as HTMLElement;
+  
+    // Verifica si el menú está desplegado (la clase "show" está presente)
+    if (navbarCollapse.classList.contains('show')) {
+      navbarToggler.click(); // Simula un clic en el botón de menú para cerrarlo
+    }
   }
-}
-
   
 
   scrollToSection(event: Event, sectionId: string) {
