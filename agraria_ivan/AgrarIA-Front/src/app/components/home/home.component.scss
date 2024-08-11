@@ -1797,3 +1797,38 @@ html {
     max-width: 33.33%;
   }
 }
+
+// Estilos responsivos para la sección de plagas
+
+// Para pantallas grandes (3 columnas)
+@media (min-width: 992px) {
+  .plagas .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .plagas .col-lg-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+// Para pantallas medianas (2 columnas)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .plagas .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+// Para pantallas pequeñas (1 columna)
+@media (max-width: 767.98px) {
+  .plagas .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .plagas .d-flex {
+    justify-content: center;
+  }
+}
