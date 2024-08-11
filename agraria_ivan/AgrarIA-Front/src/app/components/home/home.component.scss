@@ -1724,6 +1724,21 @@ html {
 
 .navbar-toggler {
   background-color: #007bff; /* Cambia este valor al color que prefieras para el botón de toggle */
+  position: absolute;
+  right: 10px;  /* Ajusta la posición del botón a la derecha */
+  top: 10px;    /* Ajusta la posición del botón hacia abajo */
+  z-index: 1050;  /* Asegura que el botón esté por encima de otros elementos */
+
+}
+/* Ajuste adicional para móviles */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #0056b3; /* Asegúrate de que el color coincida con el diseño */
+    border: none;
+  }
 }
 
 .navbar-nav .nav-item .nav-link {

@@ -54,12 +54,27 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPlagas();
-
-    // Añade este código para cerrar el menú cuando se hace clic en un elemento de la barra de navegación
+  
+    // Cierra el menú cuando se hace clic en un elemento de la barra de navegación
     const navLinks = document.querySelectorAll('.navbar-nav a');
-    const navCollapse = document.querySelector('.navbar-collapse') as HTMLElement;;
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+    const navCollapse = document.querySelector('.navbar-collapse') as HTMLElement | null;
+    const navToggler = document.querySelector('.navbar-toggler') as HTMLElement | null;
+  
+    if (navCollapse && navToggler) {
+      // Cierra el menú cuando se hace clic en un enlace de la barra de navegación
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navCollapse, {
+              toggle: true
+            });
+            bsCollapse.hide();
+          }
+        });
+      });
+  
+      // Cierra el menú cuando se hace clic en el botón del menú desplegable
+      navToggler.addEventListener('click', () => {
         if (navCollapse.classList.contains('show')) {
           const bsCollapse = new bootstrap.Collapse(navCollapse, {
             toggle: true
@@ -67,8 +82,10 @@ export class HomeComponent implements OnInit {
           bsCollapse.hide();
         }
       });
-    });
-}
+    } else {
+      console.error('No se encontró el elemento .navbar-collapse o .navbar-toggler');
+    }
+  }
 
   
 
