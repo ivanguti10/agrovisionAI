@@ -1743,6 +1743,27 @@ html {
   }
 }
 
+/* Personalización del botón de menú en versión móvil */
+.navbar-toggler {
+  background-color: #B0802E !important; /* Fondo del botón */
+  color: #ffffff !important; /* Color del texto y el icono */
+  border-color: #B0802E !important; /* Asegura que el borde tenga el mismo color que el fondo */
+
+  &:hover,
+  &:focus {
+    background-color: darken(#B0802E, 10%) !important; /* Fondo ligeramente más oscuro al hacer hover o focus */
+    color: #ffffff !important; /* Asegura que el color del texto se mantenga blanco */
+  }
+
+  &:active {
+    background-color: lighten(#B0802E, 10%) !important; /* Fondo ligeramente más claro al hacer click */
+    color: #ffffff !important; /* Asegura que el color del texto se mantenga blanco */
+  }
+}
+
+.navbar-toggler-icon {
+  color: #ffffff !important; /* Color del icono */
+}
 
 
 
