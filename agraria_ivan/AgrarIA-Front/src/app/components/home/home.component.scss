@@ -1819,13 +1819,21 @@ html {
 // Estilos para pantallas pequeñas (1 columna)
 @media (max-width: 767.98px) {
   .plagas .col-sm-12 {
-    flex: 0 0 100% !important;
+    flex: 0 0 auto !important;
     max-width: 100% !important;
     display: flex !important;
     justify-content: center !important; /* Para centrar el contenido horizontalmente */
+    padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
+  }
+
+  .plagas .plagas-item {
+    max-width: 300px; /* Establece un ancho máximo para los ítems */
+    width: 100%; /* Asegura que los ítems se ajusten al ancho disponible */
   }
 
   .plagas .d-flex {
     flex-direction: column !important; /* Asegura que los items se apilen verticalmente */
+    align-items: center; /* Centra los ítems en la columna */
   }
 }
+
