@@ -1810,49 +1810,29 @@ html {
     margin-bottom: 0;
   }
 }
-
-.navbar-collapse {
-  background-color: #344e41 !important; /* Fondo del menú desplegable */
+/* Color de fondo del menú desplegable en dispositivos móviles */
+.navbar-collapse.show {
+  background-color: #34523e; /* Cambia este valor al color de la navbar */
+  padding: 15px; /* Espaciado interno para el contenido del menú */
+  border-radius: 5px; /* Bordes redondeados opcionales */
 }
 
+/* Asegúrate de que el texto dentro del menú sea visible */
 .navbar-nav .nav-link {
-  color: #ffffff !important; /* Color del texto */
+  color: #ffffff !important; /* Color de texto blanco */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #86958b !important; /* Fondo al pasar el cursor */
-  color: #ffffff !important; /* Color del texto al pasar el cursor */
+  background-color: #28382d !important; /* Color de fondo al pasar el cursor */
+  color: #ffffff !important; /* Color de texto al pasar el cursor */
 }
 
+/* Color de fondo del botón del menú en dispositivos móviles */
 .navbar-toggler {
-  background-color: #28382d !important; /* Fondo del botón de menú */
-  color: #ffffff !important; /* Color del ícono y texto */
+  background-color: #34523e; /* Mismo color que la navbar */
+  border-color: rgba(255, 255, 255, 0.5); /* Borde con un poco de transparencia */
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
-}
-
-.bg-secondary {
-  background-color: #344e41 !important; /* Asegúrate de que el color sea el deseado */
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text-overlap-fix {
-  position: relative;
-  z-index: 10; /* Asegúrate de que el texto esté por encima de las imágenes */
-}
-
-@media (max-width: 768px) {
-  .text-overlap-fix {
-    font-size: 1rem; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
-    text-align: center;
-  }
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
