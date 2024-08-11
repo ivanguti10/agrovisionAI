@@ -54,7 +54,23 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPlagas();
-  }
+
+    // Añade este código para cerrar el menú cuando se hace clic en un elemento de la barra de navegación
+    const navLinks = document.querySelectorAll('.navbar-nav a');
+    const navCollapse = document.querySelector('.navbar-collapse') as HTMLElement;;
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navCollapse.classList.contains('show')) {
+          const bsCollapse = new bootstrap.Collapse(navCollapse, {
+            toggle: true
+          });
+          bsCollapse.hide();
+        }
+      });
+    });
+}
+
+  
 
   scrollToSection(event: Event, sectionId: string) {
     event.preventDefault();

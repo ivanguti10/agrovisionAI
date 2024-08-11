@@ -1569,9 +1569,12 @@ html {
   font-size: 80%;
   padding: 0.8rem;
   margin-right: 15px; /* Asegura que el botón no esté demasiado a la derecha */
-  margin-left: auto; /* Centra el botón en la parte derecha */
+  margin-left: auto; /* Asegura que el botón esté alineado a la derecha */
   display: block; /* Asegura que se muestre en pantallas pequeñas */
+  z-index: 1051; /* Asegura que el botón esté encima de otros elementos */
+  position: relative; /* Evita que se solape con otros elementos */
 }
+
 
 @media (min-width: 992px) {
   #mainNav .navbar-toggler {
