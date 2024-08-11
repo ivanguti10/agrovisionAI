@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { DiseaseInfo } from './model/disease-info.model';  // Importa la interfaz
 import { DISEASES_INFO } from './model/diseases';  // Importa el objeto con los datos de las enfermedades
@@ -7,6 +7,8 @@ import { Plaga } from './model/plaga.model'; // Importa la interfaz Plaga
 import { TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { environment } from '../../../environments/environment';  // Asegúrate de que la ruta es correcta y que estás importando correctamente el archivo environment.ts
+import { Router } from '@angular/router';
+
 
 declare var bootstrap: any;
 
@@ -40,7 +42,8 @@ export class HomeComponent implements OnInit {
     private http: HttpClient,
     private emailService: EmailService,
     private translate: TranslateService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private router: Router
   ) {
     translate.setDefaultLang('es');
 
@@ -50,6 +53,8 @@ export class HomeComponent implements OnInit {
 
   switchLanguage(language: string) {
     this.translate.use(language);
+    this.closeMenu(); // Cierra el menú después de cambiar de idioma
+
   }
 
   ngOnInit(): void {
@@ -80,15 +85,23 @@ export class HomeComponent implements OnInit {
 
   }
   
+  // Método para cerrar el menú cuando se selecciona un enlace
+  closeMenu() {
+    const navbarToggler = document.querySelector('.navbar-toggler') as HTMLElement;
+    const navbarCollapse = document.querySelector('.navbar-collapse') as HTMLElement;
+
+    if (navbarToggler && navbarCollapse.classList.contains('show')) {
+      navbarToggler.click(); // Simula un clic en el botón de menú para cerrarlo
+    }
+  }
 
   
 
-  scrollToSection(event: Event, sectionId: string) {
+  scrollToSection(event: Event, section: string) {
     event.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    this.router.navigate([], { fragment: section }).then(() => {
+      this.closeMenu(); // Cierra el menú después de navegar
+    });
   }
 
   onFileSelected(event: Event): void {
