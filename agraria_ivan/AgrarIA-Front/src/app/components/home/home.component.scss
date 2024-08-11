@@ -258,14 +258,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-text-size-adjust: 100%; /* Asegura que el tamaño de texto no sea ajustado automáticamente */
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-img {
-  max-width: 100%; /* Asegura que las imágenes no se salgan de su contenedor */
-  height: auto;
 }
 
 .highlight {
@@ -553,19 +545,7 @@ code {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
-  max-width: 1140px; /* Ancho máximo para el contenedor */
-  padding: 0 15px;
-  margin: 0 auto;
 }
-
-
-@media (max-width: 767.98px) {
-  .plagas-item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
 
 @media (min-width: 576px) {
   
@@ -1773,46 +1753,3 @@ html {
 }
 
 
-/* Estilos generales para iPads (modo vertical y horizontal) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.2em; /* Ajusta el tamaño de la fuente */
-    padding: 1rem; /* Añade algo de padding */
-  }
-
-  .navbar {
-    padding: 1.5rem; /* Aumenta el padding de la navbar */
-    font-size: 1.1rem; /* Ajusta el tamaño de la fuente de la navbar */
-  }
-
-  .container2 {
-    max-width: 100%; /* Permite que el contenedor ocupe toda la anchura disponible */
-    padding: 2rem; /* Aumenta el padding */
-  }
-}
-
-/* Estilos específicos para iPad en modo horizontal */
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .navbar {
-    padding: 1rem 3rem; /* Añade más padding horizontal */
-  }
-
-  .container2 {
-    max-width: 80%; /* Limita el ancho del contenedor para mejorar la legibilidad */
-    margin: 0 auto; /* Centra el contenedor */
-  }
-
-/* Estilos para pantallas grandes (desktops, pantallas grandes de iPad) */
-@media only screen and (min-width: 1200px) {
-  .navbar {
-    font-size: 1.25rem; /* Ajusta el tamaño de la fuente */
-    padding: 2rem; /* Aumenta el padding de la navbar */
-  }
-
-  .container2 {
-    max-width: 70%; /* Limita el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-  }
-}
-
-}
