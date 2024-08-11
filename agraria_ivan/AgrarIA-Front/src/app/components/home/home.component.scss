@@ -1812,32 +1812,28 @@ html {
 }
 
 .navbar-collapse {
-  background-color: #344e41; /* Cambia este color según tu diseño */
+  background-color: #344e41 !important; /* Fondo del menú desplegable */
 }
 
 .navbar-nav .nav-link {
-  color: #ffffff; /* Color del texto */
+  color: #ffffff !important; /* Color del texto */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #28382d; /* Color de fondo al pasar el cursor */
-  color: #ffffff; /* Color del texto al pasar el cursor */
+  background-color: #28382d !important; /* Fondo al pasar el cursor */
+  color: #ffffff !important; /* Color del texto al pasar el cursor */
 }
 
-
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1); /* Un borde sutil */
+  background-color: #28382d !important; /* Fondo del botón de menú */
+  color: #ffffff !important; /* Color del ícono y texto */
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
-
-.navbar-toggler {
-  color: #ffffff; /* Asegúrate de que el texto y los íconos sean visibles */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
 }
 
 .bg-secondary {
-  background-color: #344e41 !important; /* Asegúrate de que coincida con el fondo que deseas */
+  background-color: #344e41 !important; /* Asegúrate de que el color sea el deseado */
 }
 
