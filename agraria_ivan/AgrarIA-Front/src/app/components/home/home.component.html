@@ -124,50 +124,52 @@
       </div>
     </header>
 
-<section class="page-section plagas" id="plagas">
-  <div class="container">
-    <!-- plagas Section Heading-->
-    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
-      {{ 'GLOSSARY_TITLE' | translate }}
-    </h2>
-    <br />
-    <p class="subtitulo">
-      {{ 'GLOSSARY_DESCRIPTION' | translate }}
-    </p>
-    <!-- Icon Divider-->
-    <div class="divider-custom">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-      <div class="divider-custom-line"></div>
-    </div>
+    <section class="page-section plagas" id="plagas">
+      <div class="container">
+        <!-- plagas Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+          {{ 'GLOSSARY_TITLE' | translate }}
+        </h2>
+        <br />
+        <p class="subtitulo">
+          {{ 'GLOSSARY_DESCRIPTION' | translate }}
+        </p>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+        </div>
 
-    <div class="filter-container">
-      <label for="filter">{{ 'FILTER_BY' | translate }}</label>
-      <select id="filter" [(ngModel)]="selectedFilter" (change)="applyFilter()">
-        <option value="all">{{ 'ALL' | translate }}</option>
-        <option *ngFor="let category of categories" [value]="category">{{ 'CATEGORY_' + category | translate }}</option>
-      </select>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div *ngFor="let plaga of plagas" class="col-lg-4 col-md-6 col-sm-12 mt-4 d-flex">
-          <div class="plagas-item mx-auto" data-bs-toggle="modal" [attr.data-bs-target]="'#plagasModal' + plaga.id">
-            <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="plagas-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
+        <div class="filter-container">
+          <label for="filter">{{ 'FILTER_BY' | translate }}</label>
+          <select id="filter" [(ngModel)]="selectedFilter" (change)="applyFilter()">
+            <option value="all">{{ 'ALL' | translate }}</option>
+            <option *ngFor="let category of categories" [value]="category">{{ 'CATEGORY_' + category | translate }}</option>
+          </select>
+        </div>
+        
+        <div class="container">
+          <div class="row" *ngFor="let row of rows">
+            <div class="d-flex justify-content-center w-100">
+              <div *ngFor="let plaga of row" class="col-lg-4 col-md-6 col-sm-12 mt-4 d-flex">
+                <div class="plagas-item mx-auto" data-bs-toggle="modal" [attr.data-bs-target]="'#plagasModal' + plaga.id">
+                  <div class="plagas-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="plagas-item-caption-content text-center text-white">
+                      <i class="fas fa-plus fa-3x"></i>
+                    </div>
+                  </div>
+                  <div class="plagas-item-title">{{ 'PLAGA_TITLE_' + plaga.title | translate }}</div>
+                  <img class="img-fluid modal-img" [src]="plaga.imgSrc" [alt]="plaga.altText" />
+                </div>
               </div>
             </div>
-            <div class="plagas-item-title">{{ 'PLAGA_TITLE_' + plaga.title | translate }}</div>
-            <img class="img-fluid modal-img" [src]="plaga.imgSrc" [alt]="plaga.altText" />
           </div>
         </div>
+        
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-    
     <!-- predecir Section-->
     <section class="page-section bg-primary text-white mb-0" id="predecir">
       <div class="container">
