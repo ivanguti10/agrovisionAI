@@ -1800,35 +1800,32 @@ html {
 
 // Estilos responsivos para la sección de plagas
 
-// Para pantallas grandes (3 columnas)
+// Estilos para pantallas grandes (3 columnas)
 @media (min-width: 992px) {
-  .plagas .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .plagas .col-lg-4 {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
+    flex: 0 0 33.3333% !important;
+    max-width: 33.3333% !important;
   }
 }
 
-// Para pantallas medianas (2 columnas)
+// Estilos para pantallas medianas (2 columnas)
 @media (min-width: 768px) and (max-width: 991.98px) {
   .plagas .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
   }
 }
 
-// Para pantallas pequeñas (1 columna)
+// Estilos para pantallas pequeñas (1 columna)
 @media (max-width: 767.98px) {
   .plagas .col-sm-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important; /* Para centrar el contenido horizontalmente */
   }
 
   .plagas .d-flex {
-    justify-content: center;
+    flex-direction: column !important; /* Asegura que los items se apilen verticalmente */
   }
 }
