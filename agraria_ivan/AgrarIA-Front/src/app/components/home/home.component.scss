@@ -1821,6 +1821,7 @@ html {
     max-width: 100%;
     flex: 0 0 100%;
   }
+  
 }
 
 // Estilo por defecto para todas las resoluciones (se mostrará de 3 en 3 en pantallas grandes)
@@ -1840,6 +1841,7 @@ html {
   .plagas-item-container .plagas-item {
     flex: 1 1 100%; /* 1 item por fila en pantallas pequeñas */
   }
+  
 }
 
 /* Para pantallas pequeñas y medianas (móviles y tablets) */
@@ -1875,6 +1877,14 @@ html {
   .plagas .col-md-6 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
+  }
+  .navbar-toggler {
+    margin-right: 0; 
+    padding: 8px; 
+    position: absolute; 
+    right: 15px; // Ajusta este valor para mover el botón más a la izquierda si es necesario
+    top: 50%; 
+    transform: translateY(-0%); // Centra el botón verticalmente en relación con el navbar
   }
 }
 
