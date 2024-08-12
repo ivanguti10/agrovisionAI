@@ -874,6 +874,9 @@ code {
   color: var(--bs-nav-link-color);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  text-align: center !important; // Alinea el texto a la izquierda dentro del padding
+  transition: background-color 0.3s ease, color 0.3s ease; // Transición suave en hover
+  display: block; // Asegura que el padding funcione correctamente
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1979,6 +1982,96 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
     color: #B0802E !important;
   }
 }
+
+// Ajustes para pantallas pequeñas
+@media (max-width: 576px) {
+  .navbar-brand {
+    margin-left: 10px; // Ajusta este valor según lo necesites
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    margin-right: 10px; // Ajusta este valor según lo necesites
+  }
+}
+
+// Ajustes para pantallas pequeñas
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0 10px; // Añade un padding para asegurarte de que haya espacio a los lados
+  }
+
+  .navbar-toggler {
+    margin-right: 0; // Elimina cualquier margen derecho
+    padding: 8px; // Ajusta el padding para que quede más centrado y dentro del navbar
+    position: relative; // Asegura que el botón esté posicionado correctamente dentro del navbar
+  }
+
+  .navbar-brand {
+    margin-left: 10px; // Ajusta el margen izquierdo si es necesario para centrar el título
+  }
+
+// Ajustes para pantallas pequeñas
+@media (max-width: 576px) {
+  .navbar-toggler {
+    margin-right: 0; 
+    padding: 8px; 
+    position: absolute; 
+    right: 15px; // Ajusta este valor para mover el botón más a la izquierda si es necesario
+    top: 50%; 
+    transform: translateY(-100%); // Centra el botón verticalmente en relación con el navbar
+  }
+}
+
+
+
+}
+
+// Estilos generales para el menú desplegable
+.collapse.navbar-collapse {
+  background-color: #cfc07b; // Color de fondo claro para el menú desplegable
+  border-radius: 5px; // Bordes redondeados
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra sutil para elevar el menú
+  padding: 10px; // Añade un padding alrededor del contenido
+}
+
+// Estilos para los items del menú
+.navbar-nav .nav-item {
+  margin-bottom: 10px; // Espaciado entre los elementos del menú
+}
+.navbar-nav .nav-link {
+  color: #fff; // Color del texto (ajustado según el fondo oscuro)
+  background-color: #374F1D; // Fondo para cada enlace
+  border-radius: 4px; // Bordes redondeados para los enlaces
+  padding: 8px 15px; // Espaciado dentro de cada enlace
+  padding-left: 25px; // Aumenta el padding a la izquierda del texto
+  text-align: center !important; // Alinea el texto a la izquierda dentro del padding
+  transition: background-color 0.3s ease, color 0.3s ease; // Transición suave en hover
+  display: flex !important; // Asegura que el contenido se alinee correctamente
+  align-items: center; // Centra verticalmente el contenido
+}
+
+
+
+.navbar-nav .nav-link:hover {
+  background-color: #1abc9c; // Color de fondo en hover
+  color: #fff; // Color de texto en hover
+}
+
+// Estilos para los botones de idioma
+.ms-auto.d-flex .btn {
+  border-radius: 4px; // Bordes redondeados
+  margin-bottom: 10px; // Espaciado para alinearlo con los enlaces
+  background-color: #007bff; // Color de fondo para los botones
+  color: #fff; // Color de texto
+  transition: background-color 0.3s ease; // Transición suave en hover
+}
+
+.ms-auto.d-flex .btn:hover {
+  background-color: #0056b3; // Color de fondo en hover
+}
+
 
 
 }

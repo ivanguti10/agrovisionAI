@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
@@ -71,32 +73,36 @@
         aria-label="Toggle navigation"
 
       >
-        Menu
+     
         <i class="fas fa-bars"></i>
       </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#plagas" (click)="scrollToSection($event, 'plagas')">
-                {{ 'NAV_GLOSSARY' | translate }}
+              <a class="nav-link py-3 px-0 px-lg-3 rounded text-center" href="#plagas" (click)="scrollToSection($event, 'plagas')" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+                  {{ 'NAV_GLOSSARY' | translate }}
               </a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#predecir" (click)="scrollToSection($event, 'predecir')">
-                {{ 'PREDICT_PEST' | translate }}
+          </li>
+          
+          <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded text-center" href="#predecir" (click)="scrollToSection($event, 'predecir')" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+                  {{ 'PREDICT_PEST' | translate }}
               </a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#explicabilidad" (click)="scrollToSection($event, 'explicabilidad')">
-                {{ 'EXPLICA' | translate }}
+          </li>
+          
+          <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded text-center" href="#explicabilidad" (click)="scrollToSection($event, 'explicabilidad')" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+                  {{ 'EXPLICA' | translate }}
               </a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contacto" (click)="scrollToSection($event, 'contacto')">
+          </li>
+          
+          
+          
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded " href="#contacto" (click)="scrollToSection($event, 'contacto')" style="display: flex; justify-content: center; align-items: center; text-align: center;">
                 {{ 'CONTACT' | translate }}
-              </a>
-            </li>
-
+            </a>
+        </li>
           </ul>
           <ul class="navbar-nav ms-auto">
 
@@ -109,10 +115,11 @@
             </button>
           </div>
         </ul>
-          <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#inicio" (click)="scrollToSection($event, 'inicio')">
-              X
+            <a class="nav-link py-3 px-0 px-lg-3 rounded " href="#inicio" (click)="scrollToSection($event, 'inicio')"style="display: flex; justify-content: center; align-items: center; text-align: center;">
+              &#9650;
+ 
             </a>
           </li>
         </ul>
