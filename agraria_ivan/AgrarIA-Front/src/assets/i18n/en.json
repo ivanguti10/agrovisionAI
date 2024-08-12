@@ -6,7 +6,7 @@
     "FILTER_BY": "Filter by:",
     "ALL": "All",
     "PREDICT_PEST": "Predict Pest",
-    "UPLOAD_IMAGE": "Load the image of the crop leaves that you want to check for any diseases",
+    "UPLOAD_IMAGE": "Upload an image of the crop leaves to determine if they have any diseases",
     "SELECT_IMAGE": "Select Image",
     "PREDICTION_CONFIDENCE": "Prediction Confidence:",
     "CLOSE_WINDOW": "Close Window",
