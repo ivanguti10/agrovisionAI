@@ -1799,6 +1799,15 @@ html {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 
+  .navbar-toggler {
+    margin-right: 0;
+    padding: 8px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-5%);
+  }
+
   .plagas .col-sm-12 {
     flex: 0 0 50% !important; /* Cada columna ocupa el 50% del ancho disponible, creando dos columnas */
     max-width: 50% !important;
@@ -1814,7 +1823,8 @@ html {
 
   .plagas .d-flex {
     flex-direction: column !important; /* Cambia la dirección a filas para organizar los ítems en dos columnas */
-    align-items: center; /* Centra los ítems en la columna */
+    flex-wrap: wrap !important; /* Permite que los ítems se envuelvan si es necesario */
+    justify-content: center !important; /* Centra las filas en el contenedor */
   }
 
   /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
@@ -1898,7 +1908,8 @@ html {
   }
 }
 @media (max-width: 767.98px) and (min-width: 768px) and (max-width: 991.98px) {
-
+  h1, h2, h3, h5, .page-section-heading {
+  }
 }
 @media (max-width: 767.98px) and (min-width: 992px) and (max-width: 1199.98px) {
   h1, h2, h3, h5, .page-section-heading {
