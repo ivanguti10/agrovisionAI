@@ -1901,7 +1901,8 @@ html {
 // Estilos para pantallas pequeñas (1 columna)
 @media (max-width: 767.98px) {
   .plagas .col-sm-12 {
-
+    flex: 0 0 auto !important;
+    max-width: 100% !important;
     display: flex !important;
     justify-content: center !important; /* Para centrar el contenido horizontalmente */
     padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
@@ -1916,6 +1917,8 @@ html {
     flex-direction: column !important; /* Asegura que los items se apilen verticalmente */
     align-items: center; /* Centra los ítems en la columna */
   }
+
+}
 
   /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
 h1, h2, h3, h4, h5, h6 {
@@ -2298,4 +2301,4 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
 
 
 
-}
+
