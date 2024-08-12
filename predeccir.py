@@ -20,10 +20,7 @@ import json
 
 
 import urllib.parse
-import tflite_runtime.interpreter as tflite
-
-
-import tflite_runtime.interpreter as tflite
+import tflite_runtime.interpreter as tflite # type: ignore
 
 
 app = Flask(__name__, static_folder='agraria_ivan/AgrarIA-Front/dist/agrar-ia')

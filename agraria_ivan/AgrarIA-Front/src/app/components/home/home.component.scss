@@ -1822,7 +1822,7 @@ html {
   }
 
   .plagas .d-flex {
-    flex-direction: column !important; /* Cambia la dirección a filas para organizar los ítems en dos columnas */
+    flex-direction: row !important; /* Cambia la dirección a filas para organizar los ítems en dos columnas */
     justify-content: center !important; /* Centra las filas en el contenedor */
   }
 
