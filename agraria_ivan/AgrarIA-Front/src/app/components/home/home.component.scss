@@ -1588,8 +1588,48 @@ html {
 }
 
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: var(--bs-secondary-bg-color); /* Aplica el fondo de la barra de navegación al menú desplegable */
+  .navbar .collapse.navbar-collapse {
+    background-color: #cfc07b !important;
+    border-radius: 5px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    padding: 10px !important;
+  }
+  
+  
+  // Estilos para los items del menú
+  .navbar-nav .nav-item {
+    margin-bottom: 10px; // Espaciado entre los elementos del menú
+  }
+  .navbar-nav .nav-link {
+    color: #fff; // Color del texto (ajustado según el fondo oscuro)
+    background-color: #374F1D; // Fondo para cada enlace
+    border-radius: 4px; // Bordes redondeados para los enlaces
+    padding: 8px 15px; // Espaciado dentro de cada enlace
+    padding-left: 25px; // Aumenta el padding a la izquierda del texto
+    text-align: center !important; // Alinea el texto a la izquierda dentro del padding
+    transition: background-color 0.3s ease, color 0.3s ease; // Transición suave en hover
+    display: flex !important; // Asegura que el contenido se alinee correctamente
+    align-items: center; // Centra verticalmente el contenido
+  }
+  
+  
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #1abc9c; // Color de fondo en hover
+    color: #fff; // Color de texto en hover
+  }
+  
+  // Estilos para los botones de idioma
+  .ms-auto.d-flex .btn {
+    border-radius: 4px; // Bordes redondeados
+    margin-bottom: 10px; // Espaciado para alinearlo con los enlaces
+    background-color: #007bff; // Color de fondo para los botones
+    color: #fff; // Color de texto
+    transition: background-color 0.3s ease; // Transición suave en hover
+  }
+  
+  .ms-auto.d-flex .btn:hover {
+    background-color: #0056b3; // Color de fondo en hover
   }
 }
 
@@ -2030,13 +2070,13 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
 
 }
 
-// Estilos generales para el menú desplegable
-.collapse.navbar-collapse {
-  background-color: #cfc07b; // Color de fondo claro para el menú desplegable
-  border-radius: 5px; // Bordes redondeados
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra sutil para elevar el menú
-  padding: 10px; // Añade un padding alrededor del contenido
+.navbar .collapse.navbar-collapse {
+  background-color: #cfc07b !important;
+  border-radius: 5px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px !important;
 }
+
 
 // Estilos para los items del menú
 .navbar-nav .nav-item {
@@ -2072,6 +2112,169 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
 
 .ms-auto.d-flex .btn:hover {
   background-color: #0056b3; // Color de fondo en hover
+}
+
+// Ajustes para pantallas medianas (iPad y tablets)
+@media (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    padding: 0 15px; // Ajusta el padding para pantallas medianas
+  }
+
+  .navbar-toggler {
+    margin-right: 5px; // Margen derecho pequeño para una mejor alineación
+    padding: 10px; // Ajuste de padding para mayor usabilidad
+    position: relative; // Mantenemos relativo para evitar problemas de alineación
+  }
+
+  .navbar-brand {
+    margin-left: 15px; // Ajusta el margen izquierdo para pantallas medianas
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem; // Tamaño de fuente ligeramente más pequeño para pantallas medianas
+    padding: 10px 20px; // Espaciado más amplio en los enlaces para mejor accesibilidad
+  }
+}
+
+// Ajustes para pantallas grandes (escritorios y laptops)
+@media (min-width: 769px) {
+  .navbar {
+    padding: 0 20px; // Espaciado más amplio para pantallas grandes
+  }
+
+  .navbar-toggler {
+    margin-right: 10px; 
+    padding: 12px; // Padding mayor para pantallas grandes
+  }
+
+  .navbar-brand {
+    margin-left: 20px; // Espaciado más amplio a la izquierda
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem; // Tamaño de fuente estándar para pantallas grandes
+    padding: 12px 25px; // Espaciado más amplio para mayor legibilidad
+  }
+}
+
+// Estilos para los items del menú
+.navbar-nav .nav-item {
+  margin-bottom: 10px; // Espaciado entre los elementos del menú
+}
+
+.navbar-nav .nav-link {
+  color: #fff; // Color del texto (ajustado según el fondo oscuro)
+  background-color: #374F1D; // Fondo para cada enlace
+  border-radius: 4px; // Bordes redondeados para los enlaces
+  padding: 8px 15px; // Espaciado dentro de cada enlace
+  padding-left: 25px; // Aumenta el padding a la izquierda del texto
+  text-align: center !important; // Alinea el texto a la izquierda dentro del padding
+  transition: background-color 0.3s ease, color 0.3s ease; // Transición suave en hover
+  display: flex !important; // Asegura que el contenido se alinee correctamente
+  align-items: center; // Centra verticalmente el contenido
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #1abc9c; // Color de fondo en hover
+  color: #fff; // Color de texto en hover
+}
+
+// Estilos para los botones de idioma
+.ms-auto.d-flex .btn {
+  border-radius: 4px; // Bordes redondeados
+  margin-bottom: 10px; // Espaciado para alinearlo con los enlaces
+  background-color: #007bff; // Color de fondo para los botones
+  color: #fff; // Color de texto
+  transition: background-color 0.3s ease; // Transición suave en hover
+}
+
+.ms-auto.d-flex .btn:hover {
+  background-color: #0056b3; // Color de fondo en hover
+}
+
+
+// Ajustes para pantallas medianas (iPad y tablets)
+@media (min-width: 577px) and (max-width: 1024px) {
+  .navbar-collapse {
+    width: 100%; // Asegura que el contenedor ocupe todo el ancho
+  }
+
+  .navbar-nav {
+    width: 100%; // Hace que los elementos del menú ocupen todo el espacio disponible
+    display: flex;
+    flex-direction: column; // Asegura que los elementos del menú se alineen en columna
+    align-items: center; // Centra los elementos dentro del menú
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%; // Asegura que los enlaces ocupen todo el ancho del menú
+    text-align: center; // Alinea el texto al centro
+    margin-bottom: 10px; // Espaciado entre los elementos del menú
+    background-color: #374F1D; // Mantén el fondo del enlace
+    padding: 10px; // Ajusta el padding para tablets
+  }
+
+// Estilos para los botones de idioma
+.ms-auto.d-flex .btn {
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  width: 45%; // Ajusta el ancho para que los botones de idioma estén bien alineados
+  text-align: center; // Asegura que el texto esté centrado en los botones
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ms-auto.d-flex .btn:hover {
+  background-color: #0056b3;
+}
+
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar .collapse.navbar-collapse {
+       background-color: #cfc07b !important;
+
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+  }
+
+  .navbar .navbar-nav .nav-item {
+      margin-bottom: 10px;
+  }
+
+  .navbar .navbar-nav .nav-link {
+      color: #fff;
+      background-color: #374F1D;
+      border-radius: 4px;
+      padding: 8px 15px;
+      padding-left: 25px;
+      text-align: center !important;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: flex !important;
+      align-items: center;
+  }
+
+  .navbar .navbar-nav .nav-link:hover {
+      background-color: #1abc9c;
+      color: #fff;
+  }
+
+  .navbar .ms-auto.d-flex .btn {
+      border-radius: 4px;
+      margin-bottom: 10px;
+      background-color: #007bff;
+      color: #fff;
+      transition: background-color 0.3s ease;
+  }
+
+  .navbar .ms-auto.d-flex .btn:hover {
+      background-color: #0056b3;
+  }
 }
 
 
