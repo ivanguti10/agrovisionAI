@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
   filteredPlagas: Plaga[] = [];
   rows: Plaga[][] = [];
   categories: string[] = ['Manzano', 'Arandano', 'Cereza', 'Uva', 'Cítricos', 'Melocotón', 'Pimiento', 'Patata', 'Frambuesa', 'Frijol', 'Calabaza', 'Fresa', 'Tomate'];
-  menuOpen: boolean = false;
 
 
 
@@ -85,24 +84,19 @@ export class HomeComponent implements OnInit {
 
 
 
+
+
+  isMenuOpen: boolean = false;
+
   toggleMenu() {
-    const navbarCollapse = document.querySelector('#navbarResponsive') as HTMLElement;
-
-    this.menuOpen = !this.menuOpen; // Alterna el estado del menú
-
-    if (this.menuOpen) {
-      navbarCollapse.classList.add('show'); // Despliega el menú
-    } else {
-      navbarCollapse.classList.remove('show'); // Pliega el menú
-    }
+    this.isMenuOpen = !this.isMenuOpen; // Alterna el estado del menú
   }
 
   closeMenu() {
-    const navbarCollapse = document.querySelector('#navbarResponsive') as HTMLElement;
-
-    this.menuOpen = false;
-    navbarCollapse.classList.remove('show'); // Asegura que el menú se pliegue
+    this.isMenuOpen = false; // Cierra el menú
   }
+
+  
 
   scrollToSection(event: Event, sectionId: string) {
     event.preventDefault();
