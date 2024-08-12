@@ -1745,9 +1745,9 @@ html {
 
 /* Personalización del botón de menú en versión móvil */
 .navbar-toggler {
-  background-color: #B0802E !important; /* Fondo del botón */
+  background-color: #374F1D !important; /* Fondo del botón */
   color: #ffffff !important; /* Color del texto y el icono */
-  border-color: #B0802E !important; /* Asegura que el borde tenga el mismo color que el fondo */
+  border-color: #374F1D !important; /* Asegura que el borde tenga el mismo color que el fondo */
 
   &:hover,
   &:focus {
@@ -1978,36 +1978,6 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
   #mainNav .masthead-heading {
     color: #B0802E !important;
   }
-}
-
-.collapse {
-  display: none;
-}
-
-.collapse.show {
-  display: block;
-}
-
-/* Estilos para el menú desplegable */
-#navbarResponsive {
-  background-color: #374f1d; /* El color de fondo que desees */
-  padding: 1rem;
-}
-
-#navbarResponsive .nav-link {
-  color: #ffffff; /* Color del texto de los enlaces */
-}
-
-#navbarResponsive .nav-link:hover {
-  color: #f8f9fa; /* Color del texto de los enlaces al pasar el ratón */
-}
-
-.collapse.show {
-  background-color: #374f1d; /* Mantener el color de fondo cuando se despliega */
-}
-
-.navbar-toggler {
-  background-color: #374f1d !important; /* Asegúrate de que el botón de menú tenga el color correcto */
 }
 
 

@@ -83,21 +83,6 @@ export class HomeComponent implements OnInit {
   }
 
 
-
-
-
-  isMenuOpen: boolean = false;
-
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen; // Alterna el estado del menú
-  }
-
-  closeMenu() {
-    this.isMenuOpen = false; // Cierra el menú
-  }
-
-  
-
   scrollToSection(event: Event, sectionId: string) {
     event.preventDefault();
     const element = document.getElementById(sectionId);
