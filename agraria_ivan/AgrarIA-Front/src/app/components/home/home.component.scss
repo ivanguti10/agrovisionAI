@@ -1799,25 +1799,29 @@ html {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 
+  .plagas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .plagas .col-sm-12 {
-    flex: 0 0 50% !important; /* Cada columna ocupa el 50% del ancho disponible */
-    max-width: 50% !important;
-    display: flex !important;
-    justify-content: center !important; /* Centra el contenido horizontalmente */
-    padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
-    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho de la columna */
+    flex: 0 0 45% !important; /* Cada columna ocupa el 45% del ancho disponible para dejar un pequeño espacio entre columnas */
+    max-width: 45% !important;
+    margin: 2.5%; /* Espacio entre los elementos */
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box; /* Incluye el padding y margin en el ancho total */
   }
 
   .plagas .plagas-item {
-    max-width: 100%; /* El ítem ocupa todo el ancho disponible dentro de su columna */
-    width: 100%; /* Asegura que los ítems se ajusten al ancho de su contenedor */
+    width: 100%; /* Asegura que los ítems se ajusten al ancho disponible en su columna */
+    max-width: none; /* Elimina la restricción de ancho máximo */
   }
 
   .plagas .d-flex {
-    flex-direction: row !important; /* Alinea los ítems en filas */
-    flex-wrap: wrap !important; /* Permite que los ítems se distribuyan en varias filas si es necesario */
-    justify-content: flex-start; /* Alinea las filas al inicio para evitar espacios en blanco innecesarios */
-    align-items: stretch; /* Estira los ítems para que tengan la misma altura */
+    flex-direction: column !important; /* Asegura que los items se apilen verticalmente dentro de su columna */
+    align-items: center; /* Centra los ítems en la columna */
   }
 
   /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
@@ -1829,8 +1833,6 @@ html {
   .page-section-heading {
     color: #B0802E !important;
   }
-
-  /* Otros estilos adicionales... */
 
 }
 
