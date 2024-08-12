@@ -1800,22 +1800,24 @@ html {
 @media (min-width: 768px) and (max-width: 991.98px) {
 
   .plagas .col-sm-12 {
-    flex: 0 0 50% !important; /* Cada columna ocupa el 50% del ancho disponible, creando dos columnas */
+    flex: 0 0 50% !important; /* Cada columna ocupa el 50% del ancho disponible */
     max-width: 50% !important;
     display: flex !important;
-    justify-content: center !important; /* Para centrar el contenido horizontalmente */
+    justify-content: center !important; /* Centra el contenido horizontalmente */
     padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho de la columna */
   }
 
   .plagas .plagas-item {
-    max-width: 300px; /* Establece un ancho máximo para los ítems */
-    width: 100%; /* Asegura que los ítems se ajusten al ancho disponible */
+    max-width: 100%; /* El ítem ocupa todo el ancho disponible dentro de su columna */
+    width: 100%; /* Asegura que los ítems se ajusten al ancho de su contenedor */
   }
 
   .plagas .d-flex {
-    flex-direction: row !important; /* Cambia la dirección a filas para organizar los ítems en dos columnas */
-    flex-wrap: wrap !important; /* Permite que los ítems se envuelvan si es necesario */
-    justify-content: center !important; /* Centra las filas en el contenedor */
+    flex-direction: row !important; /* Alinea los ítems en filas */
+    flex-wrap: wrap !important; /* Permite que los ítems se distribuyan en varias filas si es necesario */
+    justify-content: flex-start; /* Alinea las filas al inicio para evitar espacios en blanco innecesarios */
+    align-items: stretch; /* Estira los ítems para que tengan la misma altura */
   }
 
   /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
@@ -1828,19 +1830,10 @@ html {
     color: #B0802E !important;
   }
 
-  /* Si quieres asegurarte específicamente para pantallas móviles */
-  /* Estilos generales (para pantallas grandes y por defecto) */
-  /* Pantallas pequeñas (teléfonos en modo vertical y horizontal) */
-  /* Pantallas medianas (tabletas) */
-  /* Pantallas grandes (laptops pequeñas y tabletas en modo horizontal) */
-  /* Pantallas extra grandes (laptops grandes y monitores de escritorio) */
-  /* Pantallas ultra grandes (monitores de alta resolución) */
-  /* Aplicar el color específico a .masthead-heading */
-  /* Asegurar el color para pantallas específicas */
-  /* Especificidad más alta usando el ID del contenedor o clases más específicas */
-  /* También para todas las resoluciones posibles */
+  /* Otros estilos adicionales... */
 
 }
+
 
 @media (max-width: 767.98px) {
   .plagas .col-sm-12 {
