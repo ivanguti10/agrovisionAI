@@ -1800,22 +1800,22 @@ html {
 @media (min-width: 768px) and (max-width: 991.98px) {
 
   .plagas .col-sm-12 {
-    flex: 0 0 45% !important; /* Cada columna ocupa el 45% del ancho disponible para dejar un pequeño espacio entre columnas */
-    display: flex;
-    justify-content: center;
-    padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
+    flex: 0 0 50% !important; /* Cada columna ocupa el 50% del ancho disponible, creando dos columnas */
     max-width: 50% !important;
-
+    display: flex !important;
+    justify-content: center !important; /* Para centrar el contenido horizontalmente */
+    padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
   }
 
   .plagas .plagas-item {
-    width: 100%; /* Asegura que los ítems se ajusten al ancho disponible en su columna */
-    max-width: 300px; /* Elimina la restricción de ancho máximo */
+    max-width: 300px; /* Establece un ancho máximo para los ítems */
+    width: 100%; /* Asegura que los ítems se ajusten al ancho disponible */
   }
 
   .plagas .d-flex {
-    flex-direction: column !important; /* Asegura que los items se apilen verticalmente dentro de su columna */
-    align-items: center; /* Centra los ítems en la columna */
+    flex-direction: row !important; /* Cambia la dirección a filas para organizar los ítems en dos columnas */
+    flex-wrap: wrap !important; /* Permite que los ítems se envuelvan si es necesario */
+    justify-content: center !important; /* Centra las filas en el contenedor */
   }
 
   /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
@@ -1828,9 +1828,19 @@ html {
     color: #B0802E !important;
   }
 
+  /* Si quieres asegurarte específicamente para pantallas móviles */
+  /* Estilos generales (para pantallas grandes y por defecto) */
+  /* Pantallas pequeñas (teléfonos en modo vertical y horizontal) */
+  /* Pantallas medianas (tabletas) */
+  /* Pantallas grandes (laptops pequeñas y tabletas en modo horizontal) */
+  /* Pantallas extra grandes (laptops grandes y monitores de escritorio) */
+  /* Pantallas ultra grandes (monitores de alta resolución) */
+  /* Aplicar el color específico a .masthead-heading */
+  /* Asegurar el color para pantallas específicas */
+  /* Especificidad más alta usando el ID del contenedor o clases más específicas */
+  /* También para todas las resoluciones posibles */
+
 }
-
-
 
 @media (max-width: 767.98px) {
   .plagas .col-sm-12 {
@@ -1889,7 +1899,8 @@ html {
   }
 }
 @media (max-width: 767.98px) and (min-width: 768px) and (max-width: 991.98px) {
-
+  h1, h2, h3, h5, .page-section-heading {
+  }
 }
 @media (max-width: 767.98px) and (min-width: 992px) and (max-width: 1199.98px) {
   h1, h2, h3, h5, .page-section-heading {
