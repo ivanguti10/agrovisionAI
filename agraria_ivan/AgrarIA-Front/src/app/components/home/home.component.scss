@@ -1843,13 +1843,13 @@ html {
   }
   
 }
-
-/* Ajustes para pantallas tipo iPad (entre 768px y 1024px) */
+/* Media query para pantallas tipo iPad (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .plagas-item-container .plagas-item {
     flex: 1 1 calc(50% - 1em); /* 2 items por fila en pantallas tipo iPad */
   }
 }
+
 
 /* Para pantallas pequeñas y medianas (móviles y tablets) */
 @media (max-width: 991.98px) {
@@ -1866,6 +1866,16 @@ html {
     /* Tres elementos por fila */
     flex: 0 0 33.33%;
     max-width: 33.33%;
+  }
+}
+
+// Estilos para pantallas medianas (2 columnas)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .plagas-item {
+    /* Dos elementos por fila */
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
   }
 }
 
