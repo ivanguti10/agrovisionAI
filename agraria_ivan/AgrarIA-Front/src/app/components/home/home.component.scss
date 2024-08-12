@@ -1823,7 +1823,6 @@ html {
 
   .plagas .d-flex {
     flex-direction: column !important; /* Cambia la dirección a filas para organizar los ítems en dos columnas */
-    flex-wrap: wrap !important; /* Permite que los ítems se envuelvan si es necesario */
     justify-content: center !important; /* Centra las filas en el contenedor */
   }
 
@@ -1908,8 +1907,7 @@ html {
   }
 }
 @media (max-width: 767.98px) and (min-width: 768px) and (max-width: 991.98px) {
-  h1, h2, h3, h5, .page-section-heading {
-  }
+
 }
 @media (max-width: 767.98px) and (min-width: 992px) and (max-width: 1199.98px) {
   h1, h2, h3, h5, .page-section-heading {
