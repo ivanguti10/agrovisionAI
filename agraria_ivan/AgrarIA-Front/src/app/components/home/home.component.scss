@@ -1799,24 +1799,18 @@ html {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-  .plagas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .plagas .col-sm-12 {
     flex: 0 0 45% !important; /* Cada columna ocupa el 45% del ancho disponible para dejar un pequeño espacio entre columnas */
-    max-width: 45% !important;
-    margin: 2.5%; /* Espacio entre los elementos */
     display: flex;
     justify-content: center;
-    box-sizing: border-box; /* Incluye el padding y margin en el ancho total */
+    padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
+    max-width: 50% !important;
+
   }
 
   .plagas .plagas-item {
     width: 100%; /* Asegura que los ítems se ajusten al ancho disponible en su columna */
-    max-width: none; /* Elimina la restricción de ancho máximo */
+    max-width: 300px; /* Elimina la restricción de ancho máximo */
   }
 
   .plagas .d-flex {
@@ -1835,6 +1829,7 @@ html {
   }
 
 }
+
 
 
 @media (max-width: 767.98px) {
@@ -1894,8 +1889,7 @@ html {
   }
 }
 @media (max-width: 767.98px) and (min-width: 768px) and (max-width: 991.98px) {
-  h1, h2, h3, h5, .page-section-heading {
-  }
+
 }
 @media (max-width: 767.98px) and (min-width: 992px) and (max-width: 1199.98px) {
   h1, h2, h3, h5, .page-section-heading {
