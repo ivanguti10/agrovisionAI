@@ -1898,11 +1898,11 @@ html {
   }
 }
 
-// Estilos para pantallas pequeñas (1 columna)
-@media (max-width: 767.98px) {
+// Estilos para pantallas como el iPad (2 columnas)
+@media (min-width: 768px) and (max-width: 1024px) {
   .plagas .col-sm-12 {
-    flex: 0 0 auto !important;
-    max-width: 100% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
     display: flex !important;
     justify-content: center !important; /* Para centrar el contenido horizontalmente */
     padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
@@ -1914,11 +1914,38 @@ html {
   }
 
   .plagas .d-flex {
-    flex-direction: column !important; /* Asegura que los items se apilen verticalmente */
-    align-items: center; /* Centra los ítems en la columna */
+    flex-direction: row !important; /* Asegura que los items se dispongan en filas */
+    align-items: center; /* Centra los ítems en la fila */
+  }
+}
+
+/* Para pantallas como las de un iPad (dos elementos por fila) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .plagas-item-container .plagas-item {
+    flex: 0 0 50% !important; /* Dos elementos por fila */
+    max-width: 50% !important; /* Limita el ancho máximo al 50% */
+    margin-bottom: 10px !important; /* Añade espacio entre los elementos */
   }
 
+  .plagas .col-sm-12 {
+    flex: 0 0 50% !important; /* Dos elementos por fila */
+    max-width: 50% !important; /* Limita el ancho máximo al 50% */
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 15px; /* Añade un pequeño padding para evitar que ocupe todo el ancho */
+  }
+
+  .plagas .plagas-item {
+    max-width: 300px; /* Establece un ancho máximo para los ítems */
+    width: 100%; /* Asegura que los ítems se ajusten al ancho disponible */
+  }
+
+  .plagas .d-flex {
+    flex-direction: row !important; /* Asegura que los ítems se distribuyan en filas */
+    align-items: center; /* Centra los ítems en la columna */
+  }
 }
+
 
   /* Asegurar que todos los títulos tengan el color correcto en todas las pantallas */
 h1, h2, h3, h4, h5, h6 {
@@ -2235,6 +2262,8 @@ h1, h2, h3, h4, h5, h6, .page-section-heading {
     background-color: #374F1D; // Mantén el fondo del enlace
     padding: 10px; // Ajusta el padding para tablets
   }
+
+
 
 // Estilos para los botones de idioma
 .ms-auto.d-flex .btn {
