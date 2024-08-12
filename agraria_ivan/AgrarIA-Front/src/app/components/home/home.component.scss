@@ -1844,6 +1844,13 @@ html {
   
 }
 
+/* Ajustes para pantallas tipo iPad (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .plagas-item-container .plagas-item {
+    flex: 1 1 calc(50% - 1em); /* 2 items por fila en pantallas tipo iPad */
+  }
+}
+
 /* Para pantallas pequeñas y medianas (móviles y tablets) */
 @media (max-width: 991.98px) {
   .plagas-item {
@@ -1864,10 +1871,6 @@ html {
 
 // Estilos responsivos para la sección de plagas
 
-// Estilos para pantallas grandes (3 columnas)
-@media (min-width: 992px) {
-
-}
 
 // Estilos para pantallas medianas (2 columnas)
 @media (min-width: 768px) and (max-width: 991.98px) {
