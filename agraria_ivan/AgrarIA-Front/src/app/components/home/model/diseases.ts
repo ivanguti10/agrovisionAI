@@ -176,9 +176,9 @@ export const DISEASES_INFO: { [key: string]: DiseaseInfo } = {
       confidence: ''
   },
   'Tomate Araña roja (Ácaro de dos manchas)': {
-      title: 'TOMATO_TWO_SPOTTED_SPIDER_MITE_TITLE_P',
+      title: 'TOMATO_SPIDER_MITES_TITLE_P',
       imageUrl: '../../../assets/img/plagas/Araña roja del Tomate.jpg',
-      description: 'TOMATO_TWO_SPOTTED_SPIDER_MITE_DESCRIPTION_P',
+      description: 'TOMATO_SPIDER_MITES_DESCRIPTION_P',
       confidence: ''
   },
   'Tomate Mancha diana': {
