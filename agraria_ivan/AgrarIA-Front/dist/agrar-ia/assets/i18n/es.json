@@ -136,6 +136,8 @@
     "PREDECIR_GOOGLE_COLAB": "Entrena el modelo a tu gusto",
     "TEXTO_GRAD_CAM": "Para aplicar el algoritmo de Grad-CAM a cualquier imagen accede a este Notebook:",
     "TEXTO_ENTRENAR": "Para realizar entrenamientos personalizados, accede a este Notebook:",
+    "APPLE_SCAB_DESCRIPTION": "Sarna del manzano (Apple Scab) es una enfermedad fúngica causada por Venturia inaequalis que afecta principalmente a los manzanos. Provoca manchas oscuras en hojas y frutos, disminuyendo la calidad de la cosecha. Las esporas del hongo se propagan en condiciones húmedas y frescas. Para su control, se recomienda la poda adecuada, eliminación de restos infectados y aplicación de fungicidas específicos.",
+
     "GRAD_CAM_CONCLUSION": "Grad-CAM nos proporciona una forma visual de entender y mejorar nuestro modelo de predicción de plagas en hojas de plantas, haciendo las decisiones más transparentes y confiables."
 }
   

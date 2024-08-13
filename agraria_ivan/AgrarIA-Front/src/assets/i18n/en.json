@@ -136,7 +136,8 @@
     "PREDECIR_GOOGLE_COLAB": "Train the model to your liking",
     "TEXTO_GRAD_CAM": "To apply the Grad-CAM algorithm to any image, access this Notebook:",
     "TEXTO_ENTRENAR": "To perform custom trainings, access this Notebook:",
-    
+    "APPLE_SCAB_DESCRIPTION": "Apple Scab is a fungal disease caused by Venturia inaequalis that primarily affects apple trees. It causes dark spots on leaves and fruits, reducing the quality of the harvest. The spores of the fungus spread in cool, moist conditions. For control, proper pruning, removal of infected debris, and application of specific fungicides are recommended.",
+
 
     "GRAD_CAM_CONCLUSION": "Grad-CAM provides us with a visual way to understand and improve our model for predicting pests in plant leaves, making decisions more transparent and reliable."
 
