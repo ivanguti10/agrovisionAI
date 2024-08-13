@@ -2,22 +2,11 @@ import { DiseaseInfo } from '../model/disease-info.model';
 
 export const DISEASES_INFO: { [key: string]: DiseaseInfo } = {
     'Apple scab': {
-      title: 'Sarna del manzano',
-      imageUrl: '../../../assets/img/plagas/apple scab.jpg',
-      description: `<div class="container2">
-      <h3 class="spaced-heading">Estimado agricultor,</h3>
-      <p class="spaced-paragraph">La sarna en las hojas del manzano es una enfermedad común causada por el hongo <i>Venturia inaequalis</i>. Para gestionar y prevenir esta enfermedad, recomendamos las siguientes acciones:</p>
-      <ul class="spaced-list">
-        <li><strong>Eliminación de hojas y frutos afectados</strong>: Recoger y eliminar del área de cultivo las hojas y frutos caídos que puedan estar infectados. Esto reduce la fuente de inóculo para la próxima temporada.</li>
-        <li><strong>Uso de fungicidas</strong>: Aplicar fungicidas protectores o curativos, especialmente durante la temporada de brotación y cuando las condiciones sean favorables para la infección (humedad alta y temperaturas moderadas). Es importante seguir las recomendaciones específicas del producto y las normativas locales.</li>
-        <li><strong>Manejo de la humedad</strong>: Evitar el riego por aspersión y optar por métodos de riego que minimicen la humedad en las hojas. Mantener una buena ventilación dentro del huerto también ayuda a reducir la humedad.</li>
-        <li><strong>Variedades resistentes</strong>: Considerar el uso de variedades de manzanos que sean resistentes a la sarna como parte de una estrategia a largo plazo.</li>
-        <li><strong>Monitoreo y diagnóstico temprano</strong>: Revisar regularmente las plantas para detectar síntomas de la enfermedad temprano y actuar de manera preventiva.</li>
-      </ul>
-      <p class="spaced-paragraph">Implementar estas recomendaciones ayudará a controlar y prevenir la sarna en las hojas del manzano, protegiendo la salud de su cultivo y mejorando la calidad de la cosecha.</p>
-    </div>`,
-      confidence: '' 
-},
+        title: 'APPLE_SCAB_TITLE',
+        imageUrl: '../../../assets/img/plagas/apple scab.jpg',
+        description: 'APPLE_SCAB_DESCRIPTION_P',
+        confidence: ''
+    },
 'Apple Black Rot': {
     title: ' Pudrición negra del Manzano',
     imageUrl: '../../../assets/img/plagas/apple black rot.jpg',

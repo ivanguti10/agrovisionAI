@@ -246,38 +246,39 @@
 
             <div class="modal fade" id="predictionModal" tabindex="-1" aria-labelledby="predictionModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                  <div class="modal-header border-0">
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center pb-5">
-                    <div class="container">
-                      <div class="row justify-content-center">
-                        <div class="col-lg-8" *ngIf="predictionResult">
-                          <h2 class="modal-title text-secondary text-uppercase mb-0" id="predictionModalLabel">
-                            {{ predictionResult.title  }}
-                          </h2>
-                          <div class="divider-custom">
-                            <div class="divider-custom-line"></div>
-                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                            <div class="divider-custom-line"></div>
-                          </div>
-                          <p class="confidence">
-                            {{ 'PREDICTION_CONFIDENCE' | translate }} {{ predictionResult.confidence }}%
-                          </p>
-                          <p class="mt-4 prediction-description" [innerHTML]="predictionResult.description"></p>
-                          <img class="img-fluid rounded mb-5 modal-img" [src]="predictionResult.imageUrl" alt="{{ predictionResult.title }}" />
-                          <br />
-                          <button class="btn btn-primary" data-bs-dismiss="modal">
-                            <i class="fas fa-xmark fa-fw"></i> {{ 'CLOSE_WINDOW' | translate }}
-                          </button>
-                        </div>
+                  <div class="modal-content">
+                      <div class="modal-header border-0">
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                    </div>
+                      <div class="modal-body text-center pb-5">
+                          <div class="container">
+                              <div class="row justify-content-center">
+                                  <div class="col-lg-8" *ngIf="predictionResult">
+                                      <h2 class="modal-title text-secondary text-uppercase mb-0" id="predictionModalLabel">
+                                          {{ predictionResult.title | translate }}
+                                      </h2>
+                                      <div class="divider-custom">
+                                          <div class="divider-custom-line"></div>
+                                          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                          <div class="divider-custom-line"></div>
+                                      </div>
+                                      <p class="confidence">
+                                          {{ 'PREDICTION_CONFIDENCE' | translate }} {{ predictionResult.confidence }}%
+                                      </p>
+                                      <p class="mt-4 prediction-description" [innerHTML]="(predictionResult.description | translate)"></p>
+                                      <img class="img-fluid rounded mb-5 modal-img" [src]="predictionResult.imageUrl" alt="{{ predictionResult.title | translate }}" />
+                                      <br />
+                                      <button class="btn btn-primary" data-bs-dismiss="modal">
+                                          <i class="fas fa-xmark fa-fw"></i> {{ 'CLOSE_WINDOW' | translate }}
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
+          </div>
+          
           </div>
         </div>
         <!-- Sección de resultado de la predicción -->
@@ -1192,11 +1193,12 @@
               <!-- plagas Modal - Text-->
               <p class="mt-4 mb-7">
                 {{ 'POTATO_EARLY_BLIGHT_DESCRIPTION' | translate }}
+              </p>
                 <button class="btn btn-primary" data-bs-dismiss="modal">
                   <i class="fas fa-xmark fa-fw "></i>
                   {{ 'CLOSE_WINDOW' | translate }}
                 </button>
-              </p>
+             
             </div>
           </div>
         </div>
